@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bankruptcy Outcomes and Duration — Empirical Dataset v0.1 | Open Bankruptcy Project</title>
+<meta name="description" content="Empirical findings from 218,913 federal bankruptcy cases: Ch.7 85.9% discharge in 104 days median; Ch.13 41% discharge vs 37% dismissal; full datasets CC BY 4.0.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/outcomes-duration/">
+<meta property="og:title" content="Bankruptcy Outcomes and Duration — Empirical Dataset v0.1 | Open Bankruptcy Project">
+<meta property="og:description" content="Empirical findings from 218,913 federal bankruptcy cases: Ch.7 85.9% discharge in 104 days median; Ch.13 41% discharge vs 37% dismissal; full datasets CC BY 4.0.">
+<meta property="og:type" content="article">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:880px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+.lead{font-size:1.15rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
+th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:left}
+th{background:#f0f4f8}
+ul{padding-left:1.25rem}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Bankruptcy Outcomes and Duration — Empirical Dataset v0.1 | Open Bankruptcy Project","description":"Empirical findings from 218,913 federal bankruptcy cases: Ch.7 85.9% discharge in 104 days median; Ch.13 41% discharge vs 37% dismissal; full datasets CC BY 4.0.","url":"https://viz.openbankruptcyproject.org/outcomes-duration/"}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Bankruptcy Outcomes and Duration Dataset v0.1","description":"Empirical dataset of consumer + small-business bankruptcy outcomes (discharge, dismissal, conversion) and case durations by chapter and district, from 218,913 federal cases.","url":"https://viz.openbankruptcyproject.org/outcomes-duration/","creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-27","keywords":["bankruptcy","Chapter 7","Chapter 13","Chapter 11","empirical research","case duration","discharge rate","dismissal rate"],"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://viz.openbankruptcyproject.org/data/disposition_overall_by_chapter.csv"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://viz.openbankruptcyproject.org/data/disposition_by_district_chapter.csv"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://viz.openbankruptcyproject.org/data/disposition_by_year_chapter.csv"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://viz.openbankruptcyproject.org/data/duration_by_chapter.csv"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://viz.openbankruptcyproject.org/data/filing_volume_by_year_chapter.csv"}]}</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Visualizations</a> &raquo; Outcomes &amp; Duration</nav>
+<span class="tag">Open Bankruptcy Project</span>
+<h1>Bankruptcy Outcomes and Duration &mdash; Empirical Dataset v0.1</h1>
+<p class="lead">First-pass empirical findings from 218,913 federal bankruptcy cases. Discharge rates,
+dismissal rates, conversion rates, and median case durations by chapter. CC BY 4.0.</p>
+
+<h2>Headline findings</h2>
+
+<div class="headline-stat">
+<div class="num">85.9%</div>
+<div class="label">Chapter 7 discharge rate (102,105 cases analyzed). Median 104 days from filing to discharge.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">41.0% / 37.1%</div>
+<div class="label">Chapter 13 discharge rate vs. dismissal rate (98,114 cases). The two outcomes are nearly equally likely &mdash; Chapter 13 is essentially a coin flip.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">~4.7 years</div>
+<div class="label">Median time from Ch.13 filing to discharge when the plan completes successfully (1,728 days). Reflects standard 5-year plan duration.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">5,577</div>
+<div class="label">Adversary proceedings analyzed in the sample. 33.2% terminated by dismissal; substantive merits decisions are a smaller fraction.</div>
+</div>
+
+<h2>The full chapter-level breakdown</h2>
+<table>
+<tr><th>Chapter</th><th>Total</th><th>Discharged</th><th>Dismissed</th><th>Terminated other</th><th>Pending/unknown</th><th>Discharge rate</th><th>Dismissal rate</th></tr>
+<tr><td>Chapter 7</td><td>102,105</td><td>87,689</td><td>1,930</td><td>9,970</td><td>2,516</td><td>85.9%</td><td>1.9%</td></tr>
+<tr><td>Chapter 13</td><td>98,114</td><td>40,201</td><td>36,423</td><td>8,119</td><td>13,371</td><td>41.0%</td><td>37.1%</td></tr>
+<tr><td>Chapter 11</td><td>5,637</td><td>264</td><td>885</td><td>2,500</td><td>1,988</td><td>4.7%</td><td>15.7%</td></tr>
+<tr><td>Adversary Proceeding</td><td>5,577</td><td>2</td><td>1,850</td><td>3,667</td><td>58</td><td>0.0%</td><td>33.2%</td></tr>
+</table>
+
+<h2>Duration analysis</h2>
+<p>Days from filing to outcome. Quartile breakdown:</p>
+<table>
+<tr><th>Chapter</th><th>Outcome</th><th>p25 (days)</th><th>median</th><th>p75</th><th>n</th></tr>
+<tr><td>Ch. 7</td><td>discharged</td><td>98</td><td>104</td><td>126</td><td>87,683</td></tr>
+<tr><td>Ch. 7</td><td>dismissed</td><td>38</td><td>82</td><td>199</td><td>1,928</td></tr>
+<tr><td>Ch. 13</td><td>discharged</td><td>1,283</td><td>1,728</td><td>1,890</td><td>40,201</td></tr>
+<tr><td>Ch. 13</td><td>dismissed</td><td>149</td><td>385</td><td>790</td><td>36,422</td></tr>
+<tr><td>Ch. 11</td><td>discharged</td><td>486</td><td>1,090</td><td>2,332</td><td>262</td></tr>
+<tr><td>Ch. 11</td><td>dismissed</td><td>112</td><td>258</td><td>504</td><td>885</td></tr>
+<tr><td>AP</td><td>dismissed</td><td>117</td><td>208</td><td>366</td><td>1,848</td></tr>
+</table>
+
+<h2>What the numbers tell us</h2>
+
+<h3>Chapter 7 is fast and reliable</h3>
+<p>For consumer Chapter 7 filers, the empirical answer to "how long does it take?" is <strong>about
+3.5 months from filing to discharge</strong> (median 104 days). The discharge rate is high (85.9%);
+dismissals are uncommon (1.9%); the ~10% "terminated other" category includes conversions to
+Chapter 13 and other administrative endings.</p>
+
+<h3>Chapter 13 is a coin flip</h3>
+<p>The most surprising number for most practitioners and policy researchers: Chapter 13 dismissal
+rate (37.1%) is nearly equal to its discharge rate (41.0%). For every successful Chapter 13 plan,
+roughly one fails. This isn't usually how Chapter 13 is described to debtors at intake. The 4.7-year
+median duration to successful discharge means a long commitment with substantial failure risk.</p>
+
+<h3>Chapter 11 has low personal-discharge rate by design</h3>
+<p>Most Chapter 11 cases are corporate. Corporate Chapter 11 cases don't produce a personal discharge
+&mdash; they restructure or liquidate the entity. The 4.7% discharge rate reflects the small fraction of
+individual Chapter 11 cases. This isn't a Chapter 11 "failure" rate; it's a property of the chapter.</p>
+
+<h3>Adversary Proceedings rarely produce substantive merit rulings</h3>
+<p>Of 5,577 APs, only 2 are flagged as "discharged" outcomes (and those are likely data anomalies),
+33.2% are dismissed (procedural or settlement), and most are "terminated other" (typically meaning
+settled, withdrawn, or closed administratively). The empirical pattern shows AP litigation is heavily
+settlement-driven; full litigation to merits judgment is unusual.</p>
+
+<h2>Methodology and caveats</h2>
+<div class="callout">
+<h3>Sample is from heavier-monitored districts</h3>
+<p>The 218,913-case sample is drawn from PACER pulls focused on a research subset of districts
+(KSBK, MOWBK, FLSBK, TXSBK, and others). Within-sample rates are sampling-bias resistant and
+should generalize to the broader federal docket; absolute district rankings reflect the data-collection
+focus.</p>
+<p>Disposition classification follows the case-record fields (date_discharged, date_dismissed,
+date_termed). Cases without these dates are flagged as "pending or unknown." Some terminal
+outcomes (conversion, etc.) may be classified imperfectly because the underlying field structure
+varies across districts.</p>
+</div>
+
+<h2>Open dataset</h2>
+<p>Full data files (CC BY 4.0):</p>
+<ul>
+<li><a href="../data/disposition_overall_by_chapter.csv">disposition_overall_by_chapter.csv</a> &mdash; top-line dispositions by chapter</li>
+<li><a href="../data/disposition_by_district_chapter.csv">disposition_by_district_chapter.csv</a> &mdash; per-district + per-chapter breakdown</li>
+<li><a href="../data/disposition_by_year_chapter.csv">disposition_by_year_chapter.csv</a> &mdash; year-by-year time series</li>
+<li><a href="../data/duration_by_chapter.csv">duration_by_chapter.csv</a> &mdash; quartile durations</li>
+<li><a href="../data/filing_volume_by_year_chapter.csv">filing_volume_by_year_chapter.csv</a> &mdash; annual filing volume by chapter</li>
+</ul>
+
+<h2>Citation</h2>
+<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). Bankruptcy Outcomes and Duration Dataset, v0.1.
+501(c)(3) public charity (EIN 41-5159631).
+URL: https://viz.openbankruptcyproject.org/outcomes-duration/
+License: CC BY 4.0
+</pre>
+<div class="related">
+<strong>Related:</strong>
+<a href="https://chapter-7.openbankruptcyproject.org/">Chapter 7</a> &middot;
+<a href="https://chapter-13.openbankruptcyproject.org/">Chapter 13</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f)</a> &middot;
+<a href="https://means-test.openbankruptcyproject.org/">Means test</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/">Visualizations</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Open-source toolkit</a>
+</div>
+<footer>
+<p>Empirical research published under CC BY 4.0. Methodology and source code in the public toolkit repo.
+<strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+</footer>
+</body>
+</html>
