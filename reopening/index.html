@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bankruptcy Case Reopening Patterns — Empirical Dataset v0.1 | Open Bankruptcy Project</title>
+<meta name="description" content="2.35% bankruptcy reopening rate. 93% of Ch.7 reopenings are post-discharge. Median 390 days from discharge to reopening. Empirical patterns from 5,138 reopened cases.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/reopening/">
+<meta property="og:title" content="Bankruptcy Case Reopening Patterns">
+<meta property="og:description" content="First sustained empirical view of bankruptcy reopenings under § 350(b).">
+<meta property="og:type" content="article">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:880px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+h3{font-size:1.15rem;margin:1.5rem 0 0.5rem}
+.lead{font-size:1.15rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
+th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:left}
+th{background:#f0f4f8}
+ul{padding-left:1.25rem}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Bankruptcy Case Reopening Patterns","url":"https://viz.openbankruptcyproject.org/reopening/"}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Bankruptcy Reopening Patterns Dataset v0.1","description":"First sustained empirical view of bankruptcy case reopenings under § 350(b). 5,138 reopenings analyzed across chapters and districts, 1992-2026.","url":"https://viz.openbankruptcyproject.org/reopening/","creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-27","keywords":["bankruptcy","reopening","§ 350(b)","§ 524","§ 727(d)","empirical research"]}</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Visualizations</a> &raquo; Reopening</nav>
+<span class="tag">Open Bankruptcy Project</span>
+<h1>Bankruptcy Case Reopening Patterns &mdash; Empirical Dataset v0.1</h1>
+<p class="lead">First sustained empirical view of bankruptcy case reopenings under § 350(b).
+5,138 reopened cases analyzed across all chapters, 1992-2026. Most prior literature on reopening
+works from individual case studies; this dataset enables base-rate analysis.</p>
+
+<h2>Headline findings</h2>
+
+<div class="headline-stat">
+<div class="num">2.35%</div>
+<div class="label">overall bankruptcy reopening rate (5,138 reopened of 218,913 cases). Reopening is a routine but uncommon procedural mechanism, used most often for omitted creditors, post-discharge asset discovery, and § 524 / § 727(d) proceedings.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">93%</div>
+<div class="label"><strong>Chapter 7 reopenings are post-discharge.</strong> Of 2,871 Ch.7 reopenings, 2,668 occurred after discharge had been granted. Only 2% (55 cases) reopened after dismissal. Ch.7 reopening is overwhelmingly a post-discharge phenomenon.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">390 days</div>
+<div class="label"><strong>Median time from discharge to reopening</strong> (~13 months). Most reopenings happen within 1-2 years of the original case closing. Long-tail reopenings (5+ years post-discharge) exist but are uncommon.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">2020 inflection</div>
+<div class="label">Reopening volume peaked at ~300/year in 2013-2018, declined sharply during COVID (207 in 2020 → 139 in 2022 → 112 in 2024). Pandemic court delays + stimulus-blocked household distress reduced the population of cases needing reopening.</div>
+</div>
+
+<h2>Reopening rates by chapter</h2>
+<table>
+<tr><th>Chapter</th><th>Reopened</th><th>Total in chapter</th><th>Reopening rate</th><th>Post-discharge</th><th>Post-dismissal</th></tr>
+<tr><td>Ch. 7</td><td>2,871</td><td>104,235</td><td>2.75%</td><td>93% (2,668)</td><td>2% (55)</td></tr>
+<tr><td>Ch. 11</td><td>272</td><td>5,739</td><td>4.74%</td><td>44% (120)</td><td>14% (39)</td></tr>
+<tr><td>Ch. 13</td><td>1,877</td><td>103,204</td><td>1.82%</td><td>58% (1,081)</td><td>33% (626)</td></tr>
+<tr><td>Ch. AP</td><td>115</td><td>5,577</td><td>2.06%</td><td>0% (0)</td><td>24% (28)</td></tr>
+</table>
+
+<h2>Why Chapter 7 cases get reopened</h2>
+
+<p>The 93% post-discharge rate for Ch.7 reopenings reflects the chapter's characteristic
+procedural categories:</p>
+
+<h3>1. Add omitted creditors (most common)</h3>
+<p>The single largest category of reopenings. The debtor or counsel discovers a creditor that
+was inadvertently left off Schedule E/F. Adding the creditor post-discharge ensures the discharge
+applies to that debt. Filing fee is reduced for omitted-creditor reopenings.</p>
+
+<h3>2. Post-discharge asset discovery</h3>
+<p>Trustee or third party discovers an asset (lawsuit recovery, inheritance, hidden asset) that
+should have been administered. Trustee files motion to reopen and administer the asset. Distribution
+to creditors follows.</p>
+
+<h3>3. § 524 discharge-injunction violations</h3>
+<p>Debtor seeks contempt sanctions against a creditor who continues collection on a discharged
+debt. The bankruptcy court has exclusive jurisdiction over § 524 violations; reopening is the
+procedural vehicle.</p>
+
+<h3>4. § 727(d) discharge revocation</h3>
+<p>Trustee, U.S. Trustee, or creditor files for revocation of discharge under § 727(d) on grounds
+of fraud, refusal to obey court orders, or failure to satisfy other conditions. The §727(d) cases
+documented in the <a href="../rare-outcomes/">rare outcomes dataset</a> all start as reopenings.</p>
+
+<h3>5. Reaffirmation late-filing</h3>
+<p>If a debtor wants to reaffirm a secured debt but the case has closed, reopening is required to
+file the reaffirmation agreement and obtain court approval (for pro se debtors) or trustee
+acknowledgment (for represented debtors).</p>
+
+<h2>Why Chapter 13 reopenings differ</h2>
+
+<p>Ch.13 reopening patterns split between post-discharge (58%) and post-dismissal (33%):</p>
+
+<ul>
+<li><strong>Post-discharge Ch.13 reopenings</strong> are similar to Ch.7's mix &mdash; omitted creditors,
+asset discovery, § 524 contempt &mdash; though smaller in absolute count because Ch.13 produces
+fewer discharges overall.</li>
+<li><strong>Post-dismissal Ch.13 reopenings</strong> are typically motions to vacate the dismissal &mdash;
+debtors who missed plan payments or otherwise defaulted but want a second chance to cure. Vacate-dismissal
+motions under § 1307(c) are subject to good-cause review.</li>
+</ul>
+
+<h2>Why Chapter 11 has the highest reopening rate</h2>
+
+<p>Chapter 11's 4.74% reopening rate is highest among all chapters. Drivers:</p>
+
+<ul>
+<li><strong>Corporate plan-administration cleanup.</strong> Confirmed Ch.11 plans often require
+post-confirmation administrative actions that produce reopenings (e.g., dispute resolution on
+contested claims, post-confirmation litigation cleanup).</li>
+<li><strong>Litigation-trust matters.</strong> Liquidating Ch.11 plans often establish litigation
+trusts that operate post-confirmation; reopenings facilitate trustee actions.</li>
+<li><strong>Sub V settlement disputes.</strong> Sub V plans confirmed by cramdown create more
+post-confirmation friction than consensual plans.</li>
+</ul>
+
+<h2>The 2020 reopening decline</h2>
+
+<table>
+<tr><th>Year</th><th>Reopenings</th></tr>
+<tr><td>2013</td><td>333</td></tr>
+<tr><td>2014</td><td>303</td></tr>
+<tr><td>2015</td><td>298</td></tr>
+<tr><td>2016</td><td>292</td></tr>
+<tr><td>2017</td><td>258</td></tr>
+<tr><td>2018</td><td>300</td></tr>
+<tr><td>2019</td><td>282</td></tr>
+<tr><td>2020</td><td>207</td></tr>
+<tr><td>2021</td><td>170</td></tr>
+<tr><td>2022</td><td>139</td></tr>
+<tr><td>2023</td><td>125</td></tr>
+<tr><td>2024</td><td>112</td></tr>
+<tr><td>2025</td><td>136</td></tr>
+</table>
+
+<p>The 2020+ decline parallels the broader bankruptcy-volume decline: fewer cases means fewer
+post-discharge events triggering reopenings. Plus pandemic-era court schedules and remote
+proceedings produced procedural friction that delayed reopening filings.</p>
+
+<h2>Per-district reopening concentration</h2>
+
+<table>
+<tr><th>District</th><th>Reopenings</th><th>Total cases</th><th>Reopening rate</th></tr>
+<tr><td>mowbk</td><td>1,725</td><td>42,263</td><td>4.08%</td></tr>
+<tr><td>flsbk</td><td>1,513</td><td>43,932</td><td>3.44%</td></tr>
+<tr><td>ksbk</td><td>700</td><td>41,650</td><td>1.68%</td></tr>
+<tr><td>txsbk</td><td>376</td><td>30,412</td><td>1.24%</td></tr>
+<tr><td>flmbk</td><td>123</td><td>5,699</td><td>2.16%</td></tr>
+<tr><td>mabk</td><td>71</td><td>1,441</td><td>4.93%</td></tr>
+<tr><td>nvbk</td><td>36</td><td>327</td><td>11.01%</td></tr>
+</table>
+
+<p>Top districts vary from 1.2% (Texas Southern) to 4-5% (Western Missouri, Massachusetts).
+Variation reflects local clerk-office practice in setting reopening fees, the local bar's tendency
+to file omitted-creditor motions, and per-district trustee activity post-discharge.</p>
+
+<h2>Open dataset</h2>
+<ul>
+<li><a href="../data/reopening_by_chapter.csv">reopening_by_chapter.csv</a></li>
+<li><a href="../data/reopening_by_year.csv">reopening_by_year.csv</a></li>
+<li><a href="../data/reopening_by_district.csv">reopening_by_district.csv</a></li>
+</ul>
+
+<h2>Citation</h2>
+<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). Bankruptcy Reopening Patterns Dataset, v0.1.
+501(c)(3) public charity (EIN 41-5159631).
+URL: https://viz.openbankruptcyproject.org/reopening/
+License: CC BY 4.0
+</pre>
+<div class="related">
+<strong>Related:</strong>
+<a href="https://viz.openbankruptcyproject.org/">Viz hub</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/outcomes-duration/">Outcomes</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/recidivism/">Recidivism</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/joint-filing/">Joint filing</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/rare-outcomes/">Rare outcomes</a> &middot;
+<a href="https://automatic-stay.openbankruptcyproject.org/violations/">§ 362(k) damages</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Toolkit</a>
+</div>
+<footer>
+<p>Empirical research published under CC BY 4.0. Methodology + source code in the public toolkit repo.
+<strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+</footer>
+</body>
+</html>
