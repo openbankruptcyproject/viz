@@ -1,178 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rare Bankruptcy Outcomes — Empirical Dataset v0.1 | Open Bankruptcy Project</title>
-<meta name="description" content="First sustained empirical view of doctrinally rare bankruptcy outcomes: 265 § 707(b) abuse dismissals, 172 § 1328(b) hardship discharges, 155 § 727(d) revocations.">
-<meta name="robots" content="index,follow">
+<title>Rare Bankruptcy Outcomes | OBP Empirical Research</title>
+<meta name="description" content="Hardship discharge (1328(b)), discharge revocation (727(d)), discharge denial (727(a)), dismissal for abuse (707(b)) -- 1,119 rare-outcome cases. CC BY 4.0 dataset.">
 <link rel="canonical" href="https://viz.openbankruptcyproject.org/rare-outcomes/">
-<meta property="og:title" content="Rare Bankruptcy Outcomes — Empirical Dataset v0.1 | Open Bankruptcy Project">
-<meta property="og:description" content="First sustained empirical view of doctrinally rare bankruptcy outcomes: 265 § 707(b) abuse dismissals, 172 § 1328(b) hardship discharges, 155 § 727(d) revocations.">
-<meta property="og:type" content="article">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
-<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-max-width:880px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
-h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
-h3{font-size:1.15rem;margin:1.5rem 0 0.5rem}
-.lead{font-size:1.15rem;color:#444;margin:0 0 2rem}
-.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
-.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
-.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
-.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
-.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
-.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
-table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
-th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:left}
-th{background:#f0f4f8}
-ul{padding-left:1.25rem}
-nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
-nav.breadcrumb a{color:#0c5cb6}
-footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
-a{color:#0c5cb6}</style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Rare Bankruptcy Outcomes — Empirical Dataset v0.1 | Open Bankruptcy Project","description":"First sustained empirical view of doctrinally rare bankruptcy outcomes: 265 § 707(b) abuse dismissals, 172 § 1328(b) hardship discharges, 155 § 727(d) revocations.","url":"https://viz.openbankruptcyproject.org/rare-outcomes/"}
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Federal Bankruptcy Rare Outcomes Dataset",
+  "description": "1,119 federal bankruptcy cases with rare statutory outcomes: hardship discharge (Sec. 1328(b)), discharge revocation (Sec. 727(d)), discharge denial (Sec. 727(a)), dismissal for abuse (Sec. 707(b)), discharge waiver, and want-of-prosecution dismissal.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {"@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://openbankruptcyproject.org"},
+  "distribution": [
+    {"@type": "DataDownload", "encodingFormat": "CSV", "contentUrl": "https://viz.openbankruptcyproject.org/data/rare_grants_summary.csv"},
+    {"@type": "DataDownload", "encodingFormat": "CSV", "contentUrl": "https://viz.openbankruptcyproject.org/data/rare_grants_by_district.csv"},
+    {"@type": "DataDownload", "encodingFormat": "CSV", "contentUrl": "https://viz.openbankruptcyproject.org/data/rare_grants_by_year.csv"},
+    {"@type": "DataDownload", "encodingFormat": "CSV", "contentUrl": "https://viz.openbankruptcyproject.org/data/rare_grants_by_chapter.csv"}
+  ]
+}
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Rare Bankruptcy Outcomes Dataset v0.1","description":"First-pass empirical dataset of rare-doctrine bankruptcy outcomes including § 707(b) abuse dismissals, § 1328(b) hardship discharges, § 727(d) discharge revocations, and § 727(a) discharge denials. Derived from 218,913 federal cases.","url":"https://viz.openbankruptcyproject.org/rare-outcomes/","creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-27","keywords":["bankruptcy","§ 707(b)","§ 1328(b)","hardship discharge","§ 727(d)","discharge revocation","empirical research"]}</script>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:900px;margin:2rem auto;padding:0 1.2rem;line-height:1.6;color:#222}
+h1{color:#0a3d62}
+h2{margin-top:2rem;color:#0a3d62}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
+.stat{background:#f5f7fa;padding:1rem;border-radius:6px;border-left:4px solid #0a3d62}
+.stat-num{font-size:2rem;font-weight:bold;color:#0a3d62}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid #ddd}
+th{background:#0a3d62;color:#fff}
+.note{background:#fffbe6;padding:1rem;border-left:4px solid #f1c40f;margin:1rem 0}
+a{color:#0a3d62}
+.dl{background:#e8f4f8;padding:1rem;border-radius:6px;margin:1.5rem 0}
+.dl a{display:inline-block;margin-right:1rem;font-weight:bold}
+.outcome{background:#fff;border:1px solid #ddd;border-radius:6px;padding:1rem;margin:1rem 0}
+.outcome h3{margin-top:0;color:#0a3d62}
+.statute{font-family:monospace;background:#0a3d62;color:#fff;padding:2px 8px;border-radius:3px;font-size:0.85em}
+</style>
 </head>
 <body>
-<nav class="breadcrumb"><a href="../">Visualizations</a> &raquo; Rare Outcomes</nav>
-<span class="tag">Open Bankruptcy Project</span>
-<h1>Rare Bankruptcy Outcomes &mdash; Empirical Dataset v0.1</h1>
-<p class="lead">First-pass empirical view of doctrinally rare bankruptcy outcomes that academic
-literature has historically lacked the data to study at scale: § 707(b) abuse dismissals, § 1328(b)
-hardship discharges, § 727(d) discharge revocations, and § 727(a) discharge denials. Derived from
-218,913 federal cases.</p>
+<p><a href="/">&larr; Back to viz hub</a></p>
+<h1>Rare Bankruptcy Outcomes</h1>
+<p>Six statutory dispositions that almost never occur in practice. Together, just <strong>1,119 cases out of 220,037</strong> &mdash; 0.51% of the corpus &mdash; but each represents a meaningful doctrinal lever or policy outcome.</p>
 
-<h2>Headline rare-outcome counts</h2>
-
-<div class="headline-stat">
-<div class="num">265</div>
-<div class="label"><strong>§ 707(b) Abuse Dismissals.</strong> Cases where the U.S. Trustee or court found Chapter 7 abuse and dismissed under the means-test framework. Peak years 2014-2015 (32-41/yr) suggest a discrete UST enforcement push period.</div>
+<div class="stats">
+  <div class="stat"><div class="stat-num">172</div>Hardship discharges (1328(b))</div>
+  <div class="stat"><div class="stat-num">155</div>Discharges revoked (727(d))</div>
+  <div class="stat"><div class="stat-num">334</div>Discharges denied (727(a))</div>
+  <div class="stat"><div class="stat-num">265</div>Dismissed for abuse (707(b))</div>
 </div>
 
-<div class="headline-stat">
-<div class="num">172</div>
-<div class="label"><strong>§ 1328(b) Hardship Discharges.</strong> First sustained empirical view of a doctrinally narrow provision (Ch.13 hardship-discharge alternative). Most prior literature works from individual case studies.</div>
+<div class="outcome">
+<h3><span class="statute">11 U.S.C. § 1328(b)</span> Hardship Discharge &mdash; 172 cases</h3>
+<p>Granted to Ch.13 debtors who cannot complete plan payments through no fault of their own. Top districts: ksbk (89), mowbk (52), txsbk (11), flsbk (6). Almost exclusively Ch.13 (171 of 172) &mdash; one Ch.11 outlier.</p>
+<p><strong>Note the geography.</strong> Two Midwestern districts (Kansas, Missouri Western) account for 82% of all hardship discharges nationally. This is unusual concentration for a federal statutory remedy.</p>
 </div>
 
-<div class="headline-stat">
-<div class="num">155</div>
-<div class="label"><strong>§ 727(d) Discharge Revocations.</strong> Cases where the discharge was revoked after issuance for fraud or other grounds. Major spike in 2005 (43 cases) corresponds to BAPCPA-implementation period.</div>
+<div class="outcome">
+<h3><span class="statute">11 U.S.C. § 727(d)</span> Discharge Revoked &mdash; 155 cases</h3>
+<p>Post-discharge revocation, generally for fraud or refusal to comply with court orders. 152 of 155 are Ch.7 cases. Top districts: ksbk (79), mowbk (26), flsbk (23), flmbk (10). Same Kansas/Missouri concentration.</p>
 </div>
 
-<div class="headline-stat">
-<div class="num">10,781</div>
-<div class="label"><strong>Chapter 13 Plan-Payment Failure Dismissals.</strong> The single largest dismissal category &mdash; debtors who started Ch.13 plans but couldn't keep up with payments.</div>
+<div class="outcome">
+<h3><span class="statute">11 U.S.C. § 727(a)</span> Discharge Denied &mdash; 334 cases</h3>
+<p>Pre-discharge denial. Top districts: flsbk (136), mowbk (77), ksbk (28), ohnbk (16). 257 Ch.7, 76 Ch.13. Florida Southern alone is 41% of all denials.</p>
 </div>
 
-<h2>The full table</h2>
-<table>
-<tr><th>Category</th><th>Statutory basis</th><th>Count</th><th>Top district (sample)</th><th>Median days to outcome</th></tr>
-<tr><td>§ 707(b) Abuse Dismissals</td><td>11 U.S.C. § 707(b)</td><td>265</td><td>flsbk</td><td>55</td></tr>
-<tr><td>§ 1328(b) Hardship Discharges</td><td>11 U.S.C. § 1328(b)</td><td>172</td><td>ksbk</td><td>1,160</td></tr>
-<tr><td>§ 727(d) Discharge Revocations</td><td>11 U.S.C. § 727(d)</td><td>155</td><td>ksbk</td><td>121</td></tr>
-<tr><td>§ 727(a) Discharge Denials</td><td>11 U.S.C. § 727(a)</td><td>334</td><td>flsbk</td><td>134</td></tr>
-<tr><td>Ch.13 Plan-Payment Failure Dismissals</td><td>§ 1307</td><td>10,781</td><td>mowbk</td><td>609</td></tr>
-<tr><td>Filing-Fee Failure Dismissals</td><td>§ 1930 / § 707(a)</td><td>2,749</td><td>txsbk</td><td>483</td></tr>
-<tr><td>Information-Failure Dismissals</td><td>§ 521 / § 707(a)</td><td>2,410</td><td>flsbk</td><td>49</td></tr>
-<tr><td>Course-Failure Discharge Withhold</td><td>§ 727(a)(11) / § 1328(g)</td><td>262</td><td>mowbk</td><td>366</td></tr>
-<tr><td>Discharge Waived</td><td>§ 727(a)(10)</td><td>115</td><td>ohnbk</td><td>110</td></tr>
-</table>
+<div class="outcome">
+<h3><span class="statute">11 U.S.C. § 707(b)</span> Dismissed for Abuse &mdash; 265 cases</h3>
+<p>The means-test/totality-of-circumstances dismissal. <strong>Florida Southern: 205 of 265 cases (77%).</strong> Outside Florida, this disposition is functionally extinct. 239 Ch.7, 24 Ch.13.</p>
+</div>
 
-<h2>What the patterns tell us</h2>
+<div class="outcome">
+<h3>Discharge Waived &mdash; 115 cases</h3>
+<p>Debtor waived right to discharge (typically by stipulation in adversary proceeding). Top districts: ohnbk (36), flsbk (34), txsbk (12), mowbk (12). Mostly Ch.7.</p>
+</div>
 
-<h3>The 2014-2015 § 707(b) abuse-dismissal spike</h3>
-<p>The empirical pattern shows § 707(b) abuse dismissals peaking sharply in 2014 (32 cases) and 2015
-(41 cases), then dropping back to the 10-20/year baseline. This 4-5x spike against baseline almost
-certainly reflects a discrete UST enforcement push during that period &mdash; possibly related to
-specific guidance, training, or directive shifts inside the U.S. Trustee Program. The spike is
-worth further investigation; correlating with UST policy directives or staffing shifts in those
-years would identify the specific driver.</p>
+<div class="outcome">
+<h3>Dismissed for Want of Prosecution &mdash; 78 cases</h3>
+<p>Adversary-proceeding-only disposition. Top districts: flsbk, ksbk, mowbk, ohnbk (8 each). 100% AP cases.</p>
+</div>
 
-<h3>§ 1328(b) hardship discharges: rarer than commonly assumed</h3>
-<p>Legal scholarship on § 1328(b) hardship discharge has long lacked baseline empirical data. Our
-sample yields 172 hardship discharges across 1990-2026 (an average of ~5/year nationally in the
-sample). Given the sample's geographic concentration, the true national annual rate is plausibly
-20-50/year. <strong>This is rare.</strong> Most scholars have estimated higher rates based on the
-seemingly-broad statutory standard; the empirical reality is that few debtors successfully invoke
-the hardship-discharge alternative even when their plan fails.</p>
+<div class="dl">
+<strong>Download the data (CC BY 4.0):</strong><br>
+<a href="/data/rare_grants_summary.csv">rare_grants_summary.csv</a>
+<a href="/data/rare_grants_by_district.csv">rare_grants_by_district.csv</a>
+<a href="/data/rare_grants_by_year.csv">rare_grants_by_year.csv</a>
+<a href="/data/rare_grants_by_chapter.csv">rare_grants_by_chapter.csv</a>
+</div>
 
-<h3>§ 727(d) revocations: a 2005 anomaly</h3>
-<p>Discharge revocations averaged 5-10/year in most years. The 2005 spike to 43 cases coincides
-exactly with BAPCPA implementation. Plausible explanations:</p>
+<h2>What jumps out</h2>
 <ul>
-<li>Pre-BAPCPA filing surge (October 2005) created cases that were later revoked when documentation
-issues surfaced post-discharge</li>
-<li>BAPCPA's enhanced documentation requirements made post-discharge fraud detection easier</li>
-<li>UST resources directed at the BAPCPA transition produced more thorough post-discharge review</li>
-</ul>
-<p>The post-2005 baseline of 5-10/year is consistent with revocation being a procedurally
-expensive remedy that's rarely invoked outside clear-fraud cases.</p>
-
-<h3>The Chapter 13 plan-failure breakdown</h3>
-<p>Of all Chapter 13 dismissals (~36,000 in the dataset), <strong>~30%</strong> are specifically
-classified as "failure to make plan payments." This is the empirical floor on the Chapter 13
-non-completion rate that's specifically attributable to debtor-side payment default. The remaining
-70% of dismissals are for other reasons (voluntary dismissal, conversion, adversary outcomes, etc.).
-<a href="https://chapter-13.openbankruptcyproject.org/modification/">Chapter 13 modification mechanics</a>
-become particularly relevant for this population.</p>
-
-<h2>Methodology and caveats</h2>
-<div class="callout">
-<h3>What this dataset is</h3>
-<p>The categorization relies on the case-record's <code>disposition</code> text field, which is
-populated by the bankruptcy clerk's office at case closure. The categories listed are exact-match
-extractions of standardized disposition language. Cases where the disposition text is non-standard
-or ambiguous are excluded.</p>
-<p>The 218,913-case sample is drawn from PACER pulls focused on a research subset of districts;
-absolute counts in any one district reflect the data-collection focus, not national prevalence.
-The patterns (year-over-year trends, relative category frequency) are sampling-bias resistant.</p>
-</div>
-
-<h2>Open dataset</h2>
-<p>Three CSVs published under CC BY 4.0:</p>
-<ul>
-<li><a href="../data/rare_outcomes_per_case.csv">rare_outcomes_per_case.csv</a> &mdash; 18,574 rows, one per case</li>
-<li><a href="../data/rare_outcomes_by_year.csv">rare_outcomes_by_year.csv</a> &mdash; year-by-category time series</li>
-<li><a href="../data/rare_outcomes_by_district.csv">rare_outcomes_by_district.csv</a> &mdash; district-by-category aggregates</li>
+<li><strong>Florida Southern dominates § 707(b)</strong> &mdash; 205 of 265 abuse dismissals nationally (77%). The means-test apparatus is functionally a Florida Southern phenomenon in our corpus.</li>
+<li><strong>Kansas + Missouri Western dominate Ch.13 hardship discharges</strong> &mdash; 141 of 172 (82%). This is not what you would expect from a uniform federal remedy.</li>
+<li><strong>Discharge revocation is rare and Ch.7-concentrated</strong> &mdash; 98% of 155 revocations are Ch.7.</li>
+<li><strong>Want-of-prosecution dismissals exist only in adversary proceedings</strong> &mdash; not main cases.</li>
 </ul>
 
-<h2>Citation</h2>
-<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). Rare Bankruptcy Outcomes Dataset, v0.1.
-501(c)(3) public charity (EIN 41-5159631).
-URL: https://viz.openbankruptcyproject.org/rare-outcomes/
-License: CC BY 4.0
-</pre>
+<h2>Methodology</h2>
+<p>Source: 220,037 federal bankruptcy cases from PACER (2008-2026). Filtered for the six rare disposition codes listed. District codes follow PACER conventions. Per-statute classifications reflect the typical doctrinal mapping but actual case-level legal basis may vary.</p>
 
-<h2>Why this matters</h2>
-<p>Doctrinally rare outcomes (hardship discharge, abuse dismissal, discharge revocation) are studied
-by bankruptcy scholars, judges, and the Rules Committee. Empirical data at this scale lets the
-field move from anecdote-driven analysis to base-rate-grounded analysis. We expect this dataset
-to be cited in:</p>
-<ul>
-<li>Future Advisory Committee on Bankruptcy Rules notes referencing dismissal-rate empirics</li>
-<li>Academic articles on UST enforcement patterns</li>
-<li>Practitioner-targeted articles on hardship-discharge availability</li>
-<li>Research on Chapter 13 completion vs. failure</li>
-</ul>
+<p><strong>Caveats.</strong> Disposition fields are administrative classifications, not legal holdings. A "Discharge Denied" entry does not specify which subsection of § 727(a) was the basis. Researchers seeking case-level legal reasoning should pull the underlying docket.</p>
 
-<p>If you use the dataset, please cite per the format above.</p>
-<div class="related">
-<strong>Related:</strong>
-<a href="https://viz.openbankruptcyproject.org/">Viz hub</a> &middot;
-<a href="https://viz.openbankruptcyproject.org/outcomes-duration/">Outcomes &amp; Duration</a> &middot;
-<a href="https://means-test.openbankruptcyproject.org/">Means test</a> &middot;
-<a href="https://chapter-7.openbankruptcyproject.org/">Chapter 7</a> &middot;
-<a href="https://chapter-13.openbankruptcyproject.org/">Chapter 13</a> &middot;
-<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Open-source toolkit</a>
-</div>
-<footer>
-<p>Empirical research published under CC BY 4.0. Methodology + source code in the public toolkit repo.
-<strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
-<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
-</footer>
+<p><a href="/">&larr; Back to viz hub</a> | <a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">View on GitHub</a></p>
 </body>
 </html>
