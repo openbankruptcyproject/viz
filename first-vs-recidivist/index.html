@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>First-Time vs Recidivist Bankruptcy Outcomes — Empirical Dataset v0.1 | Open Bankruptcy Project</title>
+<meta name="description" content="Chapter 13 discharge rate drops 13.4 percentage points for recidivists. Chapter 7 unchanged. Empirical analysis of 218,913 cases.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/first-vs-recidivist/">
+<meta property="og:title" content="First-Time vs Recidivist Bankruptcy Outcomes">
+<meta property="og:description" content="Ch.13 recidivists discharge at 28.7% vs 42.2% for first-time filers. Ch.7 unchanged.">
+<meta property="og:type" content="article">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:880px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+h3{font-size:1.15rem;margin:1.5rem 0 0.5rem}
+.lead{font-size:1.15rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
+th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:right}
+th{background:#f0f4f8;text-align:center}
+td:first-child,td:nth-child(2){text-align:left;font-weight:600}
+ul{padding-left:1.25rem}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"First-Time vs Recidivist Bankruptcy Outcomes","url":"https://viz.openbankruptcyproject.org/first-vs-recidivist/"}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"First-Time vs Recidivist Bankruptcy Outcomes Dataset v0.1","description":"Empirical analysis of bankruptcy outcomes by filing position. Chapter 13 discharge rate drops 13.4pp for recidivists; Chapter 7 unchanged. From 218,913 federal cases.","url":"https://viz.openbankruptcyproject.org/first-vs-recidivist/","creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-27","keywords":["bankruptcy","recidivism","first-time filer","Chapter 13","empirical research"]}</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Visualizations</a> &raquo; First-Time vs Recidivist</nav>
+<span class="tag">Open Bankruptcy Project</span>
+<h1>First-Time vs Recidivist Bankruptcy Outcomes</h1>
+<p class="lead">Do bankruptcy debtors who have filed before fare differently the second or third
+time around? The empirical answer is sharply chapter-specific: Chapter 13 recidivists fare
+dramatically worse, while Chapter 7 outcomes are essentially unchanged across filing positions.</p>
+
+<h2>The headline finding</h2>
+
+<div class="headline-stat">
+<div class="num">-13.4 pp</div>
+<div class="label"><strong>Chapter 13 discharge-rate drop for recidivists.</strong> First-time Ch.13 filers discharge at 42.2%; recidivist Ch.13 filers (2nd or later filing) discharge at 28.7%. Each additional filing position drops outcomes further (3rd+ filing discharges at just 21.4%).</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">+0.1 pp</div>
+<div class="label"><strong>Chapter 7 discharge-rate change for recidivists is essentially zero.</strong> First-time Ch.7: 85.9% discharge. Recidivist Ch.7: 86.0%. The 104-day median Ch.7 process doesn't depend on plan execution, so prior history doesn't materially affect current outcome.</div>
+</div>
+
+<h2>The full breakdown by chapter and filing position</h2>
+
+<table>
+<tr><th>Chapter</th><th>Filing position</th><th>Cases</th><th>Discharge rate</th><th>Dismissal rate</th></tr>
+<tr><td>Ch. 7</td><td>First filing</td><td>99,526</td><td>85.9%</td><td>1.8%</td></tr>
+<tr><td>Ch. 7</td><td>Second filing</td><td>2,278</td><td>86.0%</td><td>4.7%</td></tr>
+<tr><td>Ch. 7</td><td>Third+ filing</td><td>297</td><td>85.9%</td><td>6.4%</td></tr>
+<tr><td>Ch. 13</td><td>First filing</td><td>89,491</td><td>42.2%</td><td>35.6%</td></tr>
+<tr><td>Ch. 13</td><td>Second filing</td><td>7,358</td><td>30.0%</td><td>52.3%</td></tr>
+<tr><td>Ch. 13</td><td>Third+ filing</td><td>1,264</td><td>21.4%</td><td>56.9%</td></tr>
+<tr><td>Ch. 11</td><td>First filing</td><td>5,472</td><td>4.7%</td><td>15.7%</td></tr>
+<tr><td>Ch. 11</td><td>Second filing</td><td>152</td><td>5.3%</td><td>17.8%</td></tr>
+</table>
+
+<h2>Why Chapter 13 recidivists fare so much worse</h2>
+
+<p>The 13.4 percentage-point drop in Ch.13 discharge rate compounds across filing positions and
+reflects multiple mechanisms working together:</p>
+
+<h3>1. The §1328(f) lookback bar</h3>
+<p>For debtors with a prior discharge in the lookback window (4 years for Ch.7/11/12, 2 years for
+Ch.13), discharge under § 1328(a) is statutorily unavailable. About 11.8% of successive Ch.13
+filers are caught by this rule (per the <a href="https://1328f.openbankruptcyproject.org/findings/">§ 1328(f)
+findings</a>). These cases produce plan-completion-without-discharge outcomes.</p>
+
+<h3>2. § 362(c) stay limits</h3>
+<p>Recidivist filers face limited automatic-stay protection. § 362(c)(3) limits the stay to 30 days
+for filers with one prior dismissal in the past year; § 362(c)(4) eliminates the stay entirely for
+filers with two or more prior dismissals. Without stay protection, creditor pressure resumes during
+the new case and pushes plans toward failure.</p>
+
+<h3>3. Cumulative selection effects</h3>
+<p>Debtors who complete one Ch.13 plan typically don't return for another. The recidivist pool is
+self-selected for prior-failure patterns: dismissed plans, payment-default histories, and unstable
+income profiles. By the third filing, the population is concentrated in cases that didn't work the
+first two times for fundamental reasons.</p>
+
+<h3>4. Pro-se concentration</h3>
+<p>Recidivist filers are disproportionately pro-se. Attorneys who represented prior cases that
+failed often decline to represent the same client again; new attorneys are reluctant to take cases
+with prior dismissals. The pro-se share of Ch.13 third+ filings is substantially higher than the
+overall pro-se rate, and pro-se filers have lower completion rates generally.</p>
+
+<h3>5. Procedural-friction accumulation</h3>
+<p>Each filing leaves docket-history baggage. Trustees and judges develop reasoned skepticism about
+plans from filers with prior failures. Plan-confirmation hearings can be more contentious, with
+trustees more likely to object to specific plan terms.</p>
+
+<h2>Why Chapter 7 doesn't show the same pattern</h2>
+
+<p>Chapter 7's discharge rate is robust to filing position. The reasons:</p>
+<ul>
+<li><strong>Speed:</strong> Ch.7's 104-day median process doesn't give recidivism-related procedural
+friction time to accumulate.</li>
+<li><strong>No payment plan:</strong> Ch.7 doesn't depend on the debtor's sustained ability to fund
+payments over years.</li>
+<li><strong>Self-selection:</strong> recidivist filers who choose Ch.7 (rather than Ch.13) are
+typically those with limited assets and minimal disposable income. Their cases proceed straightforwardly.</li>
+<li><strong>§ 727(a)(8)/(9) lookback:</strong> debtors recently discharged in Ch.7/11/12 are
+statutorily ineligible for Ch.7 (§ 727(a)(8) bars Ch.7 discharge if prior Ch.7/11/12 discharge
+within 8 years; § 727(a)(9) bars within 6 years for prior Ch.13). Cases hitting these bars are
+filtered out before reaching the discharge-rate computation.</li>
+</ul>
+
+<p>The Ch.7 dismissal rate does climb (1.8% first-time → 6.4% third+) which reflects the
+procedural friction, but the discharge rate stays steady because the cases not discharged for
+reasons specific to recidivism are filtered into other outcome categories ("converted" or
+"terminated other") rather than appearing as dismissals.</p>
+
+<h2>Policy implications</h2>
+
+<p>The empirical pattern has direct implications for §1328(f) and §362(c) policy:</p>
+
+<ul>
+<li><strong>The procedural rules ARE working as designed</strong> in the sense that recidivist
+Chapter 13 filers face escalating outcome difficulty &mdash; the pattern Congress intended.</li>
+
+<li><strong>BUT the population caught is the most vulnerable.</strong> Recidivist Ch.13 filers
+disproportionately are pro-se, low-income, and not aware of the procedural rules. The "deterrent"
+effect doesn't deter sophisticated abusers (who avoid the rules); it disadvantages unsophisticated
+filers (who don't know the rules apply).</li>
+
+<li><strong>The §1328(f) procedural reform under 26-BK-3</strong> (Rule 4004 / § 1328(f) screening
+at petition stage, accepted by the Advisory Committee on Bankruptcy Rules in March 2026) would
+help by catching lookback-barred cases at intake rather than at plan-completion-without-discharge.
+Per the recidivism dataset, this would help the population that's currently most disadvantaged.</li>
+</ul>
+
+<h2>Methodology and caveats</h2>
+
+<div class="callout">
+<h3>Filing-position assignment</h3>
+<p>Filing position (first / second / third+) is determined by sorting all cases under a debtor's
+normalized name by filing date. Multi-filer detection by name has known false-positive risk for
+common surnames; estimated upper bound on false-positive impact 5-15%.</p>
+<p>Some "second filings" may be the same continuous bankruptcy case re-filed under a different
+case number due to procedural conversion; these aren't true recidivism but appear as such in the
+data. We exclude conversions where the disposition string flags it, but residual noise remains.</p>
+</div>
+
+<h2>Open dataset</h2>
+<p><a href="../data/first_vs_recidivist_outcomes.csv">first_vs_recidivist_outcomes.csv</a> &mdash; full breakdown by chapter and filing position (CC BY 4.0).</p>
+
+<h2>Citation</h2>
+<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). First-Time vs Recidivist Bankruptcy Outcomes Dataset, v0.1.
+501(c)(3) public charity (EIN 41-5159631).
+URL: https://viz.openbankruptcyproject.org/first-vs-recidivist/
+License: CC BY 4.0
+</pre>
+<div class="related">
+<strong>Related:</strong>
+<a href="https://viz.openbankruptcyproject.org/">Viz hub</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/recidivism/">Recidivism patterns</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/discharge-trends/">Discharge trends</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f) lookback</a> &middot;
+<a href="https://automatic-stay.openbankruptcyproject.org/successive-filings/">§ 362(c) stay limits</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Toolkit</a>
+</div>
+<footer>
+<p>Empirical research published under CC BY 4.0. Methodology + source code in the public toolkit repo.
+<strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+</footer>
+</body>
+</html>
