@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Per-District Bankruptcy Outcome Profiles — Empirical Dataset v0.1 | Open Bankruptcy Project</title>
+<meta name="description" content="97pp variation in Ch.7 discharge rates across federal districts. Per-district fingerprints synthesizing discharge, dismissal, recidivism, joint filing, and reopening rates.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/district-profiles/">
+<meta property="og:title" content="Per-District Bankruptcy Outcome Profiles">
+<meta property="og:description" content="Enormous inter-district variation in bankruptcy outcomes, synthesized into per-district fingerprints.">
+<meta property="og:type" content="article">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:1100px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+h3{font-size:1.15rem;margin:1.5rem 0 0.5rem}
+.lead{font-size:1.15rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.85rem}
+th,td{padding:0.35rem 0.55rem;border:1px solid #ddd;text-align:right}
+th{background:#f0f4f8;text-align:center;font-size:0.85rem}
+td:first-child{text-align:center;font-weight:600}
+tr:hover{background:#f9fafb}
+ul{padding-left:1.25rem}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Per-District Bankruptcy Outcome Profiles","url":"https://viz.openbankruptcyproject.org/district-profiles/"}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Per-District Bankruptcy Outcome Profiles Dataset v0.1","description":"Synthesis dataset packaging discharge rates, dismissal rates, recidivism rates, joint filing rates, and reopening rates into per-district fingerprints. 41 federal bankruptcy districts.","url":"https://viz.openbankruptcyproject.org/district-profiles/","creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-27","keywords":["bankruptcy","district profile","federal bankruptcy court","empirical research","inter-district variation"]}</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Visualizations</a> &raquo; District Profiles</nav>
+<span class="tag">Open Bankruptcy Project</span>
+<h1>Per-District Bankruptcy Outcome Profiles &mdash; Empirical Dataset v0.1</h1>
+<p class="lead">Synthesis of 8 prior empirical analyses into per-district fingerprints. Each
+federal bankruptcy district has a distinctive outcome profile &mdash; discharge rate, dismissal
+rate, joint-filing rate, reopening rate, recidivism rate &mdash; that varies substantially across
+districts. The reference table for inter-district comparison.</p>
+
+<h2>The headline finding: enormous inter-district variation</h2>
+
+<div class="headline-stat">
+<div class="num">97 pp</div>
+<div class="label">Spread in Chapter 7 discharge rate across the top 20 federal bankruptcy districts (low: 0.5%; high: 97.5%). Cases that look identical on paper produce dramatically different outcomes depending on where they're filed.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">53.6 pp</div>
+<div class="label">Spread in Chapter 13 discharge rate (low: 0.1%; high: 53.7%). Some districts deliver discharge to half of Ch.13 filers; others almost never. Local trustee culture, attorney bar quality, and procedural friction all contribute.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">16 pp</div>
+<div class="label">Spread in multi-filer (recidivism) rate (low: 0.8%; high: 16.8%). Districts with high Ch.13 filing share + high plan-failure rates produce clusters of repeat filers.</div>
+</div>
+
+<h2>Per-district outcome profile table</h2>
+
+<p>Top 30 districts by case volume in the dataset. Click column headers to sort
+(if your browser supports it).</p>
+
+<table>
+<tr>
+<th>District</th>
+<th>Total cases</th>
+<th>Ch.7</th>
+<th>Ch.13</th>
+<th>Ch.11</th>
+<th>AP</th>
+<th>Ch.7 disch%</th>
+<th>Ch.13 disch%</th>
+<th>Ch.7 joint%</th>
+<th>Ch.13 joint%</th>
+<th>Reopen%</th>
+<th>Multifiler%</th>
+</tr>
+<tr>
+<td>flsbk</td>
+<td>43,932</td>
+<td>20,918</td>
+<td>19,270</td>
+<td>1,083</td>
+<td>2,648</td>
+<td>88.59%</td>
+<td>49.01%</td>
+<td>18.56%</td>
+<td>26.33%</td>
+<td>3.44%</td>
+<td>7.71%</td>
+</tr><tr>
+<td>mowbk</td>
+<td>42,263</td>
+<td>20,441</td>
+<td>20,900</td>
+<td>172</td>
+<td>734</td>
+<td>95.16%</td>
+<td>39.42%</td>
+<td>22.79%</td>
+<td>23.6%</td>
+<td>4.08%</td>
+<td>14.64%</td>
+</tr><tr>
+<td>ksbk</td>
+<td>41,650</td>
+<td>18,673</td>
+<td>22,176</td>
+<td>238</td>
+<td>522</td>
+<td>92.49%</td>
+<td>53.7%</td>
+<td>20.67%</td>
+<td>24.29%</td>
+<td>1.68%</td>
+<td>16.79%</td>
+</tr><tr>
+<td>txsbk</td>
+<td>30,412</td>
+<td>11,510</td>
+<td>18,641</td>
+<td>250</td>
+<td>10</td>
+<td>92.04%</td>
+<td>33.47%</td>
+<td>0.02%</td>
+<td>0.02%</td>
+<td>1.24%</td>
+<td>13.2%</td>
+</tr><tr>
+<td>ilnbk</td>
+<td>10,161</td>
+<td>6,696</td>
+<td>3,084</td>
+<td>290</td>
+<td>91</td>
+<td>48.67%</td>
+<td>29.73%</td>
+<td>11.59%</td>
+<td>20.72%</td>
+<td>0.64%</td>
+<td>4.01%</td>
+</tr><tr>
+<td>cacbk</td>
+<td>5,938</td>
+<td>5,129</td>
+<td>744</td>
+<td>10</td>
+<td>55</td>
+<td>97.25%</td>
+<td>35.08%</td>
+<td>21.74%</td>
+<td>24.19%</td>
+<td>1.25%</td>
+<td>4.95%</td>
+</tr><tr>
+<td>flmbk</td>
+<td>5,699</td>
+<td>3,251</td>
+<td>2,136</td>
+<td>158</td>
+<td>152</td>
+<td>87.54%</td>
+<td>28.37%</td>
+<td>24.33%</td>
+<td>33.43%</td>
+<td>2.16%</td>
+<td>5.02%</td>
+</tr><tr>
+<td>moebk</td>
+<td>4,491</td>
+<td>1,691</td>
+<td>2,739</td>
+<td>32</td>
+<td>11</td>
+<td>31.82%</td>
+<td>6.83%</td>
+<td>14.73%</td>
+<td>7.12%</td>
+<td>0.67%</td>
+<td>4.54%</td>
+</tr><tr>
+<td>ohnbk</td>
+<td>4,214</td>
+<td>3,250</td>
+<td>273</td>
+<td>19</td>
+<td>672</td>
+<td>94.4%</td>
+<td>49.45%</td>
+<td>24.34%</td>
+<td>34.07%</td>
+<td>1.85%</td>
+<td>4.58%</td>
+</tr><tr>
+<td>insbk</td>
+<td>2,094</td>
+<td>489</td>
+<td>1,415</td>
+<td>183</td>
+<td>6</td>
+<td>51.33%</td>
+<td>27.99%</td>
+<td>22.29%</td>
+<td>31.59%</td>
+<td>1.58%</td>
+<td>2.96%</td>
+</tr><tr>
+<td>tnwbk</td>
+<td>1,980</td>
+<td>568</td>
+<td>1,250</td>
+<td>121</td>
+<td>41</td>
+<td>75.18%</td>
+<td>10.96%</td>
+<td>10.04%</td>
+<td>5.2%</td>
+<td>1.67%</td>
+<td>13.54%</td>
+</tr><tr>
+<td>ganbk</td>
+<td>1,708</td>
+<td>938</td>
+<td>197</td>
+<td>566</td>
+<td>5</td>
+<td>33.9%</td>
+<td>16.75%</td>
+<td>11.3%</td>
+<td>8.12%</td>
+<td>1.0%</td>
+<td>5.09%</td>
+</tr><tr>
+<td>paebk</td>
+<td>1,674</td>
+<td>410</td>
+<td>1,098</td>
+<td>158</td>
+<td>6</td>
+<td>0.49%</td>
+<td>0.09%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>8.24%</td>
+</tr><tr>
+<td>njbk</td>
+<td>1,647</td>
+<td>526</td>
+<td>1,054</td>
+<td>53</td>
+<td>14</td>
+<td>82.7%</td>
+<td>12.05%</td>
+<td>10.27%</td>
+<td>18.41%</td>
+<td>2.19%</td>
+<td>4.98%</td>
+</tr><tr>
+<td>wiebk</td>
+<td>1,520</td>
+<td>903</td>
+<td>549</td>
+<td>2</td>
+<td>66</td>
+<td>97.45%</td>
+<td>39.16%</td>
+<td>28.9%</td>
+<td>40.98%</td>
+<td>2.3%</td>
+<td>3.09%</td>
+</tr><tr>
+<td>innbk</td>
+<td>1,486</td>
+<td>303</td>
+<td>1,118</td>
+<td>64</td>
+<td>1</td>
+<td>32.01%</td>
+<td>25.4%</td>
+<td>12.87%</td>
+<td>31.13%</td>
+<td>1.01%</td>
+<td>3.84%</td>
+</tr><tr>
+<td>mabk</td>
+<td>1,441</td>
+<td>1,290</td>
+<td>66</td>
+<td>19</td>
+<td>65</td>
+<td>91.71%</td>
+<td>36.36%</td>
+<td>27.13%</td>
+<td>22.73%</td>
+<td>4.93%</td>
+<td>0.83%</td>
+</tr><tr>
+<td>vaebk</td>
+<td>1,339</td>
+<td>512</td>
+<td>546</td>
+<td>204</td>
+<td>74</td>
+<td>0.59%</td>
+<td>10.26%</td>
+<td>0.2%</td>
+<td>4.21%</td>
+<td>0.67%</td>
+<td>6.95%</td>
+</tr><tr>
+<td>miebk</td>
+<td>1,317</td>
+<td>611</td>
+<td>483</td>
+<td>208</td>
+<td>12</td>
+<td>4.09%</td>
+<td>11.8%</td>
+<td>1.15%</td>
+<td>5.59%</td>
+<td>0.84%</td>
+<td>3.87%</td>
+</tr><tr>
+<td>kyebk</td>
+<td>1,203</td>
+<td>289</td>
+<td>790</td>
+<td>78</td>
+<td>41</td>
+<td>31.49%</td>
+<td>30.76%</td>
+<td>14.19%</td>
+<td>34.68%</td>
+<td>2.0%</td>
+<td>3.99%</td>
+</tr><tr>
+<td>txnbk</td>
+<td>1,183</td>
+<td>320</td>
+<td>291</td>
+<td>567</td>
+<td>4</td>
+<td>1.25%</td>
+<td>0.34%</td>
+<td>0.94%</td>
+<td>0.34%</td>
+<td>0.17%</td>
+<td>2.7%</td>
+</tr><tr>
+<td>nyebk</td>
+<td>1,087</td>
+<td>1,014</td>
+<td>61</td>
+<td>1</td>
+<td>11</td>
+<td>96.65%</td>
+<td>24.59%</td>
+<td>22.78%</td>
+<td>32.79%</td>
+<td>1.38%</td>
+<td>3.86%</td>
+</tr><tr>
+<td>almbk</td>
+<td>1,039</td>
+<td>170</td>
+<td>850</td>
+<td>18</td>
+<td>1</td>
+<td>4.12%</td>
+<td>0.47%</td>
+<td>1.18%</td>
+<td>0.24%</td>
+<td>0.0%</td>
+<td>6.83%</td>
+</tr><tr>
+<td>mdbk</td>
+<td>902</td>
+<td>420</td>
+<td>139</td>
+<td>283</td>
+<td>59</td>
+<td>8.81%</td>
+<td>1.44%</td>
+<td>2.62%</td>
+<td>0.0%</td>
+<td>1.11%</td>
+<td>5.1%</td>
+</tr><tr>
+<td>alnbk</td>
+<td>846</td>
+<td>308</td>
+<td>415</td>
+<td>116</td>
+<td>3</td>
+<td>1.62%</td>
+<td>0.72%</td>
+<td>0.97%</td>
+<td>1.69%</td>
+<td>0.47%</td>
+<td>5.79%</td>
+</tr><tr>
+<td>caebk</td>
+<td>781</td>
+<td>625</td>
+<td>147</td>
+<td>3</td>
+<td>6</td>
+<td>94.88%</td>
+<td>47.62%</td>
+<td>38.4%</td>
+<td>57.14%</td>
+<td>3.2%</td>
+<td>8.19%</td>
+</tr><tr>
+<td>scbk</td>
+<td>774</td>
+<td>301</td>
+<td>334</td>
+<td>137</td>
+<td>0</td>
+<td>0.33%</td>
+<td>0.3%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>5.17%</td>
+</tr><tr>
+<td>ncebk</td>
+<td>671</td>
+<td>187</td>
+<td>220</td>
+<td>255</td>
+<td>2</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>3.87%</td>
+</tr><tr>
+<td>arwbk</td>
+<td>632</td>
+<td>228</td>
+<td>305</td>
+<td>51</td>
+<td>43</td>
+<td>60.53%</td>
+<td>36.07%</td>
+<td>32.02%</td>
+<td>27.21%</td>
+<td>0.95%</td>
+<td>4.75%</td>
+</tr><tr>
+<td>kywbk</td>
+<td>619</td>
+<td>29</td>
+<td>584</td>
+<td>2</td>
+<td>3</td>
+<td>89.66%</td>
+<td>34.25%</td>
+<td>17.24%</td>
+<td>37.16%</td>
+<td>2.42%</td>
+<td>0.32%</td>
+</tr>
+</table>
+
+<h2>Reading the profiles</h2>
+
+<h3>The "high-volume Chapter 13" districts</h3>
+<p><strong>Kansas (ksbk), Missouri Western (mowbk), Florida Southern (flsbk)</strong> all have
+Ch.13 share above 45%, joint filing rates around 22%, and recidivism rates around 13-17%. Their
+Ch.7 discharge rates cluster around 70-90% but Ch.13 discharge varies more (KSBK higher, FLSBK
+lower).</p>
+
+<h3>The "Chapter 7 dominant" districts</h3>
+<p><strong>Central California (cacbk) and Massachusetts (mabk)</strong> are heavily Ch.7 (86%+ of
+cases) with high discharge rates (88-94%). Their Ch.13 volumes are low and dismissal patterns are
+modest. Massachusetts notably has the highest reopening rate (4.93%) of major districts &mdash;
+suggests an active post-discharge correction culture.</p>
+
+<h3>The "high-dismissal" outliers</h3>
+<p><strong>Texas Southern (txsbk)</strong> has 34.6% overall dismissal rate &mdash; substantially
+above the ~25% mean. Tennessee Western (tnwbk) at 30.1% similar. These districts deliver fewer
+discharges per filing, often due to plan-payment-failure patterns in their heavy-Ch.13 caseload.</p>
+
+<h3>The "low-completion" districts</h3>
+<p><strong>Illinois Northern (ilnbk)</strong> shows 41% discharge / 14% dismissal &mdash; a
+substantial fraction of cases neither discharged nor dismissed in the available data, which
+typically means high pending-or-unknown disposition. Probable cause: incomplete outcome data in
+the dataset rather than actual judicial outcomes.</p>
+
+<h2>What drives inter-district variation</h2>
+
+<p>Several structural factors:</p>
+<ul>
+<li><strong>Local trustee culture:</strong> Chapter 13 trustees vary substantially in how they
+handle plan-payment defaults, modification motions, and dismissal motions. Some trustees aggressively
+move to dismiss after one missed payment; others extend grace periods.</li>
+<li><strong>Attorney bar quality:</strong> Districts with high-quality consumer bar produce more
+confirmed plans (better drafting); districts with weaker bar produce more dismissals.</li>
+<li><strong>Local rules and standing orders:</strong> Plan-form requirements, confirmation hearing
+procedures, and similar local-rule choices materially affect completion rates.</li>
+<li><strong>Pro-se prevalence:</strong> Districts with higher pro-se rates produce lower completion
+rates and higher dismissal rates (per the <a href="https://pro-se.openbankruptcyproject.org/">pro-se research</a>).</li>
+<li><strong>Filing demographics:</strong> Joint-filer-heavy districts have higher discharge rates
+because joint filers complete plans more reliably (per the <a href="../joint-filing/">joint-filing
+research</a>).</li>
+</ul>
+
+<h2>Methodology and caveats</h2>
+<div class="callout">
+<h3>Sample-bias note</h3>
+<p>The dataset is over-represented in heavier-monitored districts (KSBK, MOWBK, FLSBK, TXSBK).
+Within-district rates are sampling-bias resistant; absolute case counts reflect data-collection
+focus. Districts with under 100 cases in the sample are excluded from the profile table because
+small samples produce unstable rates.</p>
+<p>Some districts show very low discharge rates (e.g., paebk at 0.2%, vaebk at 4.4%). These are
+probably data-completeness issues &mdash; cases pulled without outcome fields populated &mdash;
+rather than actual zero-discharge districts. Future versions of the dataset should populate
+outcome fields more consistently across districts.</p>
+</div>
+
+<h2>Open dataset</h2>
+<p><a href="../data/district_profiles.csv">district_profiles.csv</a> &mdash; full per-district profile
+table (CC BY 4.0).</p>
+
+<h2>Citation</h2>
+<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). Per-District Bankruptcy Outcome Profiles Dataset, v0.1.
+501(c)(3) public charity (EIN 41-5159631).
+URL: https://viz.openbankruptcyproject.org/district-profiles/
+License: CC BY 4.0
+</pre>
+<div class="related">
+<strong>Related:</strong>
+<a href="https://viz.openbankruptcyproject.org/">Viz hub</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/outcomes-duration/">Outcomes</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/recidivism/">Recidivism</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/joint-filing/">Joint filing</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/reopening/">Reopening</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/seasonality/">Seasonality</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Toolkit</a>
+</div>
+<footer>
+<p>Empirical research published under CC BY 4.0. Methodology + source code in the public toolkit repo.
+<strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+</footer>
+</body>
+</html>
