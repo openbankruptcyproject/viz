@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Discharge Withholding Patterns | OBP Empirical Research</title>
+<meta name="description" content="817 federal bankruptcy cases where discharge was withheld for missing financial-management certificates or local form failures. CC BY 4.0 dataset.">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/withholding/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Federal Bankruptcy Discharge Withholding Patterns",
+  "description": "817 cases where discharge was withheld due to administrative/procedural failures (financial-management certificate, domestic-support compliance, local form requirements). Per-district, per-chapter, and per-reason breakdown.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {"@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://openbankruptcyproject.org"},
+  "distribution": [
+    {"@type": "DataDownload", "encodingFormat": "CSV", "contentUrl": "https://viz.openbankruptcyproject.org/data/withholding_by_district.csv"},
+    {"@type": "DataDownload", "encodingFormat": "CSV", "contentUrl": "https://viz.openbankruptcyproject.org/data/withholding_by_chapter.csv"},
+    {"@type": "DataDownload", "encodingFormat": "CSV", "contentUrl": "https://viz.openbankruptcyproject.org/data/withholding_by_reason.csv"}
+  ]
+}
+</script>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:900px;margin:2rem auto;padding:0 1.2rem;line-height:1.6;color:#222}
+h1{color:#0a3d62}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
+.stat{background:#f5f7fa;padding:1rem;border-radius:6px;border-left:4px solid #0a3d62}
+.stat-num{font-size:2rem;font-weight:bold;color:#0a3d62}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid #ddd}
+th{background:#0a3d62;color:#fff}
+.note{background:#fffbe6;padding:1rem;border-left:4px solid #f1c40f;margin:1rem 0}
+a{color:#0a3d62}
+.dl{background:#e8f4f8;padding:1rem;border-radius:6px;margin:1.5rem 0}
+.dl a{display:inline-block;margin-right:1rem;font-weight:bold}
+</style>
+</head>
+<body>
+<p><a href="/">&larr; Back to viz hub</a></p>
+<h1>Discharge Withholding Patterns</h1>
+<p><strong>817 federal bankruptcy cases</strong> where discharge was withheld for administrative or procedural failures despite the underlying case otherwise running to completion. The cleanest signal of how procedural traps catch debtors after substantive eligibility is established.</p>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">492</div>Cert of Personal Financial Mgmt failures (60.2% of all withholdings)</div>
+  <div class="stat"><div class="stat-num">21.05</div>Wisconsin Eastern withholding rate (per 1,000 cases) &mdash; highest</div>
+  <div class="stat"><div class="stat-num">10.11</div>Ch.11 withholding rate per 1,000 cases (highest of all chapters)</div>
+  <div class="stat"><div class="stat-num">817</div>Total cases &mdash; debtor completed bankruptcy but did not receive discharge</div>
+</div>
+
+<div class="note">
+<strong>What this measures.</strong> Discharge withholding is distinct from discharge <em>denial</em> (§ 727(a)) or <em>revocation</em> (§ 727(d)). The case proceeded normally; the debtor simply failed to file the post-petition financial-management course certificate (Rule 1007(b)(7)) or comply with another procedural prerequisite. The discharge can typically still be obtained by curing the defect &mdash; but most never are.
+</div>
+
+<h2>By withholding reason</h2>
+<table>
+<thead><tr><th>Reason</th><th>Count</th></tr></thead>
+<tbody>
+<tr><td>Cert of Instructional Course for Personal Financial Mgmt</td><td>492</td></tr>
+<tr><td>Other reasons</td><td>262</td></tr>
+<tr><td>Cert of financial mgmt course + DSO</td><td>29</td></tr>
+<tr><td>Domestic Support Obligation compliance</td><td>17</td></tr>
+<tr><td>Chapter 13 Cert of Eligibility</td><td>4</td></tr>
+<tr><td>Cert of Personal Financial Mgmt Course</td><td>4</td></tr>
+<tr><td>Cert of Financial Mgmt + Local Form 2831</td><td>4</td></tr>
+<tr><td>Cert of PFM + Ch.13 Cert of Eligibility</td><td>3</td></tr>
+<tr><td>Local Form 2831</td><td>2</td></tr>
+</tbody>
+</table>
+
+<h2>By chapter</h2>
+<table>
+<thead><tr><th>Chapter</th><th>Withheld</th><th>Total cases</th><th>Rate per 1,000</th></tr></thead>
+<tbody>
+<tr><td>Ch.11</td><td>58</td><td>5,737</td><td>10.11</td></tr>
+<tr><td>Ch.13</td><td>425</td><td>103,194</td><td>4.12</td></tr>
+<tr><td>Ch.7</td><td>334</td><td>104,300</td><td>3.20</td></tr>
+</tbody>
+</table>
+
+<h2>Top districts (per 1,000 cases, volume &gt;=500)</h2>
+<table>
+<thead><tr><th>District</th><th>Withheld</th><th>Total cases</th><th>Rate per 1,000</th></tr></thead>
+<tbody>
+<tr><td>wiebk</td><td>32</td><td>1,520</td><td>21.05</td></tr>
+<tr><td>caebk</td><td>11</td><td>781</td><td>14.08</td></tr>
+<tr><td>mabk</td><td>19</td><td>1,441</td><td>13.19</td></tr>
+<tr><td>kyebk</td><td>10</td><td>1,227</td><td>8.15</td></tr>
+<tr><td>kywbk</td><td>5</td><td>619</td><td>8.08</td></tr>
+<tr><td>txsbk</td><td>202</td><td>30,412</td><td>6.64</td></tr>
+<tr><td>innbk</td><td>10</td><td>1,508</td><td>6.63</td></tr>
+<tr><td>tnwbk</td><td>12</td><td>2,014</td><td>5.96</td></tr>
+<tr><td>cacbk</td><td>29</td><td>5,938</td><td>4.88</td></tr>
+<tr><td>mowbk</td><td>181</td><td>42,275</td><td>4.28</td></tr>
+</tbody>
+</table>
+
+<div class="dl">
+<strong>Download the data (CC BY 4.0):</strong><br>
+<a href="/data/withholding_by_district.csv">withholding_by_district.csv</a>
+<a href="/data/withholding_by_chapter.csv">withholding_by_chapter.csv</a>
+<a href="/data/withholding_by_reason.csv">withholding_by_reason.csv</a>
+</div>
+
+<h2>Methodology</h2>
+<p>Source: 220,037 federal bankruptcy cases from PACER (2008-2026). Filtered for the nine "Discharge Withheld" disposition codes. District codes follow PACER court conventions (e.g., wiebk = U.S. Bankruptcy Court, Eastern District of Wisconsin). Rate denominators are total cases in that district/chapter, not just those that reached the discharge phase.</p>
+
+<p><strong>Caveats.</strong> The "Other Reasons" bucket (262 cases) is opaque. Some withholdings may eventually be resolved by curing the defect &mdash; this dataset captures the disposition recorded at case close. Per-district rates can be skewed by tiny denominators; we set a 500-case minimum for ranked tables.</p>
+
+<p><a href="/">&larr; Back to viz hub</a> | <a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">View on GitHub</a></p>
+</body>
+</html>
