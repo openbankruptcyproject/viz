@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Filing Volume Spike Days | OBP Empirical Research</title>
+<meta name="description" content="Anomalous high-volume filing days across federal bankruptcy courts: BAPCPA Oct 2005 rush, mass-debtor batch days. CC BY 4.0 dataset.">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/spike-days/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Federal Bankruptcy Filing Volume Spike Days",
+  "description": "Days with anomalously high bankruptcy filing volumes per court and nationwide. Includes the historic October 2005 BAPCPA rush plus modern mass-debtor batch days.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {"@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://openbankruptcyproject.org"}
+}
+</script>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:980px;margin:2rem auto;padding:0 1.2rem;line-height:1.6;color:#222}
+h1{color:#0a3d62}
+h2{color:#0a3d62;margin-top:2rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
+.stat{background:#f5f7fa;padding:1rem;border-radius:6px;border-left:4px solid #0a3d62}
+.stat-num{font-size:2rem;font-weight:bold;color:#0a3d62}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.92em}
+th,td{padding:6px 10px;text-align:left;border-bottom:1px solid #ddd}
+th{background:#0a3d62;color:#fff}
+.note{background:#fffbe6;padding:1rem;border-left:4px solid #f1c40f;margin:1rem 0}
+.bapcpa{background:#ffe5e5;padding:1rem;border-left:4px solid #c0392b;margin:1.5rem 0}
+a{color:#0a3d62}
+.dl{background:#e8f4f8;padding:1rem;border-radius:6px;margin:1.5rem 0}
+.dl a{display:inline-block;margin-right:1rem;font-weight:bold}
+</style>
+</head>
+<body>
+<p><a href="/">&larr; Back to viz hub</a></p>
+<h1>Filing Volume Spike Days</h1>
+<p>Days when federal bankruptcy courts received anomalously high petition volumes &mdash; either nationwide (z &ge; 4) or per-court (z &ge; 3 vs. that court's daily mean). The single most striking pattern in the entire 220K-case corpus is the October 2005 BAPCPA rush.</p>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">746</div>Nationwide filings, Oct 14, 2005 (z = 36.61)</div>
+  <div class="stat"><div class="stat-num">198</div>Highest single-court single-day (mowbk, Oct 14, 2005)</div>
+  <div class="stat"><div class="stat-num">19.5</div>Nationwide daily-filings mean (full corpus)</div>
+  <div class="stat"><div class="stat-num">137</div>Texas Northern, July 9, 2025 (z = 24.04)</div>
+</div>
+
+<div class="bapcpa">
+<strong>The BAPCPA rush.</strong> The Bankruptcy Abuse Prevention and Consumer Protection Act of 2005 took effect <strong>October 17, 2005</strong>, raising the bar for Ch.7 eligibility (means test) and adding pre-filing credit-counseling requirements. The result: a stampede of pre-effective-date filings. The 5 highest nationwide days in our entire 35-year corpus are all October 11&ndash;15, 2005. Missouri Western, Kansas, Florida Southern, and Texas Southern simultaneously hit their all-time peak loads.
+</div>
+
+<h2>Top 15 nationwide spike days</h2>
+<table>
+<thead><tr><th>Date</th><th>Nationwide filings</th><th>Z-score</th><th>Likely cause</th></tr></thead>
+<tbody>
+<tr><td>2005-10-14</td><td>746</td><td>36.61</td><td>BAPCPA Friday rush (eve of Mon. effective date)</td></tr>
+<tr><td>2005-10-15</td><td>530</td><td>25.72</td><td>BAPCPA Saturday rush</td></tr>
+<tr><td>2005-10-13</td><td>380</td><td>18.16</td><td>BAPCPA Thursday rush</td></tr>
+<tr><td>2005-10-12</td><td>312</td><td>14.74</td><td>BAPCPA week pre-rush</td></tr>
+<tr><td>2005-10-16</td><td>261</td><td>12.17</td><td>BAPCPA Sunday rush</td></tr>
+<tr><td>2005-10-11</td><td>173</td><td>7.73</td><td>BAPCPA Tuesday pre-rush</td></tr>
+<tr><td>2004-11-01</td><td>168</td><td>7.48</td><td>Monday post-Halloween (recurring pattern)</td></tr>
+<tr><td>2025-07-09</td><td>167</td><td>7.43</td><td>Modern mass-debtor batch (Texas Northern)</td></tr>
+<tr><td>2003-03-03</td><td>153</td><td>6.73</td><td>First Monday of March</td></tr>
+<tr><td>2004-03-01</td><td>137</td><td>5.92</td><td>First-of-month spike</td></tr>
+<tr><td>2003-05-02</td><td>131</td><td>5.62</td><td>Friday post-month-start</td></tr>
+<tr><td>2005-01-03</td><td>131</td><td>5.62</td><td>First business day of 2005</td></tr>
+<tr><td>2005-10-06</td><td>121</td><td>5.11</td><td>Pre-BAPCPA buildup</td></tr>
+<tr><td>2002-11-01</td><td>120</td><td>5.06</td><td>First-of-month spike</td></tr>
+<tr><td>2024-10-31</td><td>110</td><td>4.56</td><td>Halloween 2024 (likely month-end deadline)</td></tr>
+</tbody>
+</table>
+
+<h2>Top 20 single-court single-day spikes (by z-score)</h2>
+<p>Days where a single court saw filings far above its own daily mean.</p>
+<table>
+<thead><tr><th>Court</th><th>Date</th><th>Filings</th><th>Court mean</th><th>Z-score</th></tr></thead>
+<tbody>
+<tr><td>mowbk</td><td>2005-10-14</td><td>198</td><td>5.4</td><td>35.18</td></tr>
+<tr><td>ksbk</td><td>2005-10-14</td><td>153</td><td>5.2</td><td>31.08</td></tr>
+<tr><td>mowbk</td><td>2005-10-15</td><td>174</td><td>5.4</td><td>30.80</td></tr>
+<tr><td>ksbk</td><td>2005-10-15</td><td>147</td><td>5.2</td><td>29.82</td></tr>
+<tr><td>vaebk</td><td>2012-10-18</td><td>40</td><td>1.3</td><td>29.07</td></tr>
+<tr><td>txnbk</td><td>2025-07-09</td><td>137</td><td>1.7</td><td>24.04</td></tr>
+<tr><td>flsbk</td><td>2005-10-14</td><td>184</td><td>5.5</td><td>23.68</td></tr>
+<tr><td>txsbk</td><td>2005-10-15</td><td>159</td><td>4.3</td><td>22.31</td></tr>
+<tr><td>ksbk</td><td>2005-10-13</td><td>105</td><td>5.2</td><td>20.98</td></tr>
+<tr><td>txsbk</td><td>2005-10-14</td><td>145</td><td>4.3</td><td>20.29</td></tr>
+<tr><td>ohsbk</td><td>2025-08-05</td><td>19</td><td>1.2</td><td>19.71</td></tr>
+<tr><td>mdbk</td><td>1996-12-27</td><td>18</td><td>1.2</td><td>19.04</td></tr>
+<tr><td>mowbk</td><td>2005-10-12</td><td>103</td><td>5.4</td><td>17.83</td></tr>
+<tr><td>kyebk</td><td>2009-09-09</td><td>17</td><td>1.3</td><td>17.60</td></tr>
+<tr><td>txsbk</td><td>2004-11-01</td><td>126</td><td>4.3</td><td>17.55</td></tr>
+</tbody>
+</table>
+
+<div class="dl">
+<strong>Download the data (CC BY 4.0):</strong><br>
+<a href="/data/spike_days_per_court.csv">spike_days_per_court.csv</a>
+<a href="/data/spike_days_nationwide.csv">spike_days_nationwide.csv</a>
+<a href="/data/single_court_day_max.csv">single_court_day_max.csv</a>
+</div>
+
+<h2>What's in the modern spikes</h2>
+<ul>
+<li><strong>Texas Northern, July 9, 2025</strong> &mdash; 137 cases in a court that averages 1.7/day. Most likely an organized multi-debtor matter. Researchers can pull the underlying dockets via PACER.</li>
+<li><strong>Ohio Southern, August 5, 2025</strong> &mdash; 19 cases vs. 1.2/day mean. Smaller scale but same signature.</li>
+<li><strong>Virginia Eastern, October 18, 2012</strong> &mdash; 40 cases vs. 1.3/day mean. Predates the modern mass-debtor era.</li>
+<li><strong>Maryland, December 27, 1996</strong> &mdash; 18 cases vs. 1.2/day. End-of-year filing crunch in a low-volume era.</li>
+</ul>
+
+<h2>Methodology</h2>
+<p>For each court with at least 30 days of filing history, we computed the daily mean and standard deviation of filings. Spike days are those with z-score &ge; 3 OR raw count &ge; 5x mean. Nationwide spikes use the cross-court daily total. The corpus spans 1990&ndash;2026.</p>
+
+<p><strong>Caveat.</strong> A "spike" reflects court-day filing volume, not anything about the merits or legitimacy of the cases filed. Mass-debtor batches can be legitimate (consolidated mass tort) or operationally suspicious (debt-mill day-end batches). This dataset is the volume signal; root-cause analysis requires docket-level review.</p>
+
+<p><a href="/filing-trends/">&rarr; See also: Filing Volume Trends (35-year time series)</a></p>
+<p><a href="/">&larr; Back to viz hub</a> | <a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">View on GitHub</a></p>
+</body>
+</html>
