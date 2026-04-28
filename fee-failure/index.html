@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bankruptcy Filing-Fee Failure Dismissals — Empirical Dataset v0.1 | Open Bankruptcy Project</title>
+<meta name="description" content="2,749 fee-failure dismissals analyzed. 99.2% are Ch.13 plan-installment failures, not Ch.7 access barriers. 2005 peak (737), post-2008 collapse (4 in 2009).">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/fee-failure/">
+<meta property="og:title" content="Bankruptcy Filing-Fee Failure Dismissals">
+<meta property="og:description" content="99% of fee-failure dismissals are Ch.13 plan-installment failures, not filing-day access barriers.">
+<meta property="og:type" content="article">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:880px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+h3{font-size:1.15rem;margin:1.5rem 0 0.5rem}
+.lead{font-size:1.15rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
+th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:right}
+th{background:#f0f4f8;text-align:center}
+td:first-child{text-align:center;font-weight:600}
+ul{padding-left:1.25rem}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Bankruptcy Filing-Fee Failure Dismissals","url":"https://viz.openbankruptcyproject.org/fee-failure/"}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Bankruptcy Filing-Fee Failure Dismissals Dataset v0.1","description":"Empirical view of bankruptcy fee-failure dismissals: 99% are Chapter 13, 483-day median to dismissal, 2003-2007 spike then post-BAPCPA collapse. From 2,749 fee-failure cases.","url":"https://viz.openbankruptcyproject.org/fee-failure/","creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-27","keywords":["bankruptcy","filing fee","§ 1930","Chapter 13","plan installment","empirical research"]}</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Visualizations</a> &raquo; Fee Failure</nav>
+<span class="tag">Open Bankruptcy Project</span>
+<h1>Bankruptcy Filing-Fee Failure Dismissals &mdash; Empirical Dataset v0.1</h1>
+<p class="lead">2,749 cases dismissed for "failure to pay filing fee." The empirical pattern is
+not what casual readers might assume &mdash; these aren't filing-day failures by debtors who can't
+muster $338. They're predominantly Chapter 13 plans that defaulted on fee installments months
+or years into the case.</p>
+
+<h2>Headline findings</h2>
+
+<div class="headline-stat">
+<div class="num">99.2%</div>
+<div class="label"><strong>Filing-fee failures are Chapter 13.</strong> Of 2,749 fee-failure dismissals, 2,727 are Ch.13. Only 21 are Ch.7. The Ch.7 IFP waiver under § 1930(f)(3) is working &mdash; low-income Ch.7 filers either qualify for a waiver or aren't classified as fee-failure dismissals.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">483 days</div>
+<div class="label"><strong>Median time from filing to fee-failure dismissal.</strong> These aren't filing-day failures &mdash; they're Ch.13 plan-installment fee-payment defaults that surface 16+ months into the case as the cumulative fee installments fall behind alongside other plan-payment failures.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">2005 → 2009</div>
+<div class="label"><strong>737 fee-failure dismissals in 2005, only 4 in 2009.</strong> A 99% drop in three years suggests a procedural-classification regime change as BAPCPA-era Ch.13 fee-payment-via-plan-installment mechanics stabilized. Pre-BAPCPA fee-failure was a routine label; post-BAPCPA it's residual.</div>
+</div>
+
+<h2>The Chapter 7 vs Chapter 13 asymmetry</h2>
+
+<p>The 99.2% Ch.13 share is the most striking finding:</p>
+
+<table>
+<tr><th>Chapter</th><th>Fee-failures</th><th>Total cases</th><th>Rate per 1,000</th></tr>
+<tr><td>Chapter 7</td><td>21</td><td>104,235</td><td>0.20</td></tr>
+<tr><td>Chapter 11</td><td>1</td><td>5,739</td><td>0.17</td></tr>
+<tr><td>Chapter 13</td><td>2,727</td><td>103,204</td><td>26.42</td></tr>
+</table>
+
+<p>The 132x difference between Ch.7 (0.20/1,000) and Ch.13 (26.42/1,000) reflects the structural
+difference:</p>
+
+<ul>
+<li><strong>Chapter 7 fee-payment is generally up-front.</strong> Filers either pay $338 at filing or apply for IFP waiver under § 1930(f)(3). Below-150%-of-poverty filers can typically waive. Cases that don't pay don't get filed.</li>
+<li><strong>Chapter 13 fee-payment is structured into the plan.</strong> The $313 filing fee can be paid in installments under FRBP 1006(b), typically as part of plan payments. When plan payments fail (the normal Ch.13 failure mode), the fee-installment payments fail along with everything else.</li>
+</ul>
+
+<p>So "filing-fee failure dismissal" in Ch.13 is a label that captures one specific dimension of
+plan-payment failure. The underlying phenomenon is Ch.13 plan failure, not "couldn't afford
+filing fee."</p>
+
+<h2>The 2003-2008 era and the post-BAPCPA collapse</h2>
+
+<p>The year-over-year pattern is telling:</p>
+
+<table>
+<tr><th>Year</th><th>Fee-failures</th></tr>
+<tr><td>2001</td><td>13</td></tr>
+<tr><td>2002</td><td>57</td></tr>
+<tr><td>2003</td><td>192</td></tr>
+<tr><td>2004</td><td>393</td></tr>
+<tr><td>2005</td><td>737 (peak)</td></tr>
+<tr><td>2006</td><td>694</td></tr>
+<tr><td>2007</td><td>472</td></tr>
+<tr><td>2008</td><td>123</td></tr>
+<tr><td>2009</td><td>4 (post-collapse)</td></tr>
+<tr><td>2010-2025</td><td>typically 0-9/year</td></tr>
+</table>
+
+<p>The 2005 peak coincides with the BAPCPA pre-deadline filing surge; the dramatic 2008-2009
+collapse points to a procedural-classification regime change. Most likely:</p>
+
+<ul>
+<li><strong>Pre-BAPCPA</strong>, "failure to pay filing fee" was the default disposition label for
+many Ch.13 plan-installment failures. The clerk's office routinely classified plan-installment
+fee defaults under this disposition.</li>
+<li><strong>Post-BAPCPA</strong>, classification practice shifted. Plan-installment failures get
+classified under "Dismissed for failure to make plan payments" (the 10,781-case category we
+analyzed in the rare-outcomes dataset) rather than under "failure to pay filing fee."</li>
+</ul>
+
+<p>This is a classification-convention finding, not a substantive change in debtor behavior. The
+underlying plan-failure rate is comparable across the 2005-2009 transition; the label distribution
+shifted.</p>
+
+<h2>Per-district concentration</h2>
+
+<p>Top districts by fee-failure rate per 1,000 cases:</p>
+
+<table>
+<tr><th>District</th><th>Fee-failures</th><th>Total cases</th><th>Per 1,000</th></tr>
+<tr><td>txsbk</td><td>1,061</td><td>30,412</td><td>34.89</td></tr>
+<tr><td>wiebk</td><td>52</td><td>1,520</td><td>34.21</td></tr>
+<tr><td>mowbk</td><td>948</td><td>42,263</td><td>22.43</td></tr>
+<tr><td>tnwbk</td><td>42</td><td>1,980</td><td>21.21</td></tr>
+<tr><td>flmbk</td><td>87</td><td>5,699</td><td>15.27</td></tr>
+<tr><td>ksbk</td><td>344</td><td>41,650</td><td>8.26</td></tr>
+<tr><td>flsbk</td><td>168</td><td>43,932</td><td>3.82</td></tr>
+<tr><td>moebk</td><td>13</td><td>4,491</td><td>2.89</td></tr>
+</table>
+
+<p>Texas Southern's 34.89/1,000 is the highest among major districts. Texas Southern is a
+heavy Ch.13 district, so its fee-failure rate compounds with its Ch.13 share. Wisconsin Eastern
+shows similar structural concentration in a much smaller absolute volume.</p>
+
+<p>Districts with low fee-failure rates (Florida Southern at 3.82, Florida Middle at 15.27) tend
+to have either lower Ch.13 share or different classification conventions for plan-installment
+fee defaults.</p>
+
+<h2>Methodology and caveats</h2>
+
+<div class="callout">
+<h3>What "fee-failure" actually measures</h3>
+<p>The disposition string "Dismissed for failure to pay filing fee" captures one specific
+clerk-office classification of a particular type of dismissal. It does NOT capture all cases
+where the debtor couldn't pay the filing fee &mdash; many Ch.7 filers in that situation use the
+IFP waiver, and many Ch.13 filers in that situation get dismissed under "failure to make plan
+payments" rather than this specific label.</p>
+<p>Researchers wanting empirical data on "access-to-bankruptcy-due-to-fees" should use this
+dataset alongside IFP waiver data (not currently in the dataset; would need to be extracted
+from § 1930(f)(3) filings specifically) and the broader plan-payment-failure data.</p>
+</div>
+
+<h2>Open dataset</h2>
+<ul>
+<li><a href="../data/fee_failure_by_district.csv">fee_failure_by_district.csv</a></li>
+<li><a href="../data/fee_failure_by_year.csv">fee_failure_by_year.csv</a></li>
+<li><a href="../data/fee_failure_by_chapter.csv">fee_failure_by_chapter.csv</a></li>
+</ul>
+
+<h2>Citation</h2>
+<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). Bankruptcy Filing-Fee Failure Dismissals Dataset, v0.1.
+501(c)(3) public charity (EIN 41-5159631).
+URL: https://viz.openbankruptcyproject.org/fee-failure/
+License: CC BY 4.0
+</pre>
+<div class="related">
+<strong>Related:</strong>
+<a href="https://viz.openbankruptcyproject.org/">Viz hub</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/outcomes-duration/">Outcomes</a> &middot;
+<a href="https://chapter-13.openbankruptcyproject.org/plan-structure/">Ch.13 plan structure</a> &middot;
+<a href="https://pro-se.openbankruptcyproject.org/">Pro se patterns</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Toolkit</a>
+</div>
+<footer>
+<p>Empirical research published under CC BY 4.0. Methodology + source code in the public toolkit repo.
+<strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+</footer>
+</body>
+</html>
