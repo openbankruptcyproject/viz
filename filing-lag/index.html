@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Filing-to-Discharge Lag Distribution | OBP Empirical Research</title>
+<meta name="description" content="Percentile distribution of days from filing to discharge across 87,683 Ch.7 and 40,201 Ch.13 federal bankruptcy cases. CC BY 4.0 dataset.">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/filing-lag/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Federal Bankruptcy Filing-to-Discharge Lag Distribution",
+  "description": "Percentile distribution (p5 through p99) of days from filing to discharge for 128,000+ federal bankruptcy cases. Per-chapter and per-district breakdowns.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {"@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://openbankruptcyproject.org"}
+}
+</script>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:980px;margin:2rem auto;padding:0 1.2rem;line-height:1.6;color:#222}
+h1{color:#0a3d62}
+h2{color:#0a3d62;margin-top:2rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
+.stat{background:#f5f7fa;padding:1rem;border-radius:6px;border-left:4px solid #0a3d62}
+.stat-num{font-size:2rem;font-weight:bold;color:#0a3d62}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.92em}
+th,td{padding:6px 10px;text-align:left;border-bottom:1px solid #ddd}
+th{background:#0a3d62;color:#fff}
+.note{background:#fffbe6;padding:1rem;border-left:4px solid #f1c40f;margin:1rem 0}
+a{color:#0a3d62}
+.dl{background:#e8f4f8;padding:1rem;border-radius:6px;margin:1.5rem 0}
+.dl a{display:inline-block;margin-right:1rem;font-weight:bold}
+</style>
+</head>
+<body>
+<p><a href="/">&larr; Back to viz hub</a></p>
+<h1>Filing-to-Discharge Lag Distribution</h1>
+<p>How long does a federal bankruptcy actually take from petition to discharge order? <strong>128,000+ closed cases</strong> in our corpus &mdash; full percentile breakdown by chapter and by district.</p>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">104</div>Ch.7 median lag (days)</div>
+  <div class="stat"><div class="stat-num">1,728</div>Ch.13 median lag (days = 4.7 years)</div>
+  <div class="stat"><div class="stat-num">1,090</div>Ch.11 median lag (days = 3.0 years)</div>
+  <div class="stat"><div class="stat-num">98 &ndash; 122</div>Ch.7 p25-p50 spread &mdash; very tight</div>
+</div>
+
+<h2>Lag percentiles by chapter</h2>
+<table>
+<thead><tr><th>Chapter</th><th>n</th><th>p5</th><th>p25</th><th>p50</th><th>p75</th><th>p90</th><th>p99</th></tr></thead>
+<tbody>
+<tr><td>Ch.7</td><td>87,683</td><td>90</td><td>98</td><td>104</td><td>126</td><td>247</td><td>1,357</td></tr>
+<tr><td>Ch.13</td><td>40,201</td><td>916</td><td>1,283</td><td>1,728</td><td>1,890</td><td>1,964</td><td>2,353</td></tr>
+<tr><td>Ch.11</td><td>262</td><td>253</td><td>486</td><td>1,090</td><td>2,332</td><td>2,980</td><td>4,043</td></tr>
+</tbody>
+</table>
+
+<div class="note">
+<strong>Read the Ch.7 distribution carefully.</strong> The 90 &ndash; 247 day band (p5 to p90) is suspicious-looking concentration around the statutory minimum waiting period after the 341 meeting (60 days post-petition for objection deadline + a few weeks for discharge order). The p99 of 1,357 days reflects asset cases or adversary-tied delays.
+</div>
+
+<h2>Median Ch.7 lag by district (top 20 by volume)</h2>
+<table>
+<thead><tr><th>District</th><th>n</th><th>p25</th><th>p50</th><th>p75</th><th>p90</th></tr></thead>
+<tbody>
+<tr><td>mowbk</td><td>19,452</td><td>96</td><td>102</td><td>119</td><td>225</td></tr>
+<tr><td>flsbk</td><td>18,530</td><td>99</td><td>104</td><td>117</td><td>284</td></tr>
+<tr><td>ksbk</td><td>17,269</td><td>98</td><td>113</td><td>147</td><td>295</td></tr>
+<tr><td>txsbk</td><td>10,594</td><td>96</td><td>104</td><td>133</td><td>469</td></tr>
+<tr><td>cacbk</td><td>4,987</td><td>101</td><td>103</td><td>109</td><td>122</td></tr>
+<tr><td>ilnbk</td><td>3,257</td><td>102</td><td>109</td><td>115</td><td>134</td></tr>
+<tr><td>ohnbk</td><td>3,068</td><td>98</td><td>103</td><td>112</td><td>162</td></tr>
+<tr><td>flmbk</td><td>2,846</td><td>97</td><td>105</td><td>122</td><td>207</td></tr>
+<tr><td>mabk</td><td>1,183</td><td>108</td><td>122</td><td>168</td><td>327</td></tr>
+<tr><td>nyebk</td><td>980</td><td>108</td><td>118</td><td>140</td><td>188</td></tr>
+<tr><td>mnbk</td><td>377</td><td>90</td><td>94</td><td>98</td><td>102</td></tr>
+</tbody>
+</table>
+
+<h2>Median Ch.13 lag by district (top 20 by volume)</h2>
+<table>
+<thead><tr><th>District</th><th>n</th><th>p25</th><th>p50</th><th>p75</th><th>p90</th></tr></thead>
+<tbody>
+<tr><td>ksbk</td><td>11,908</td><td>1,274</td><td>1,630</td><td>1,900</td><td>1,974</td></tr>
+<tr><td>flsbk</td><td>9,445</td><td>1,188</td><td>1,660</td><td>1,875</td><td>1,939</td></tr>
+<tr><td>mowbk</td><td>8,239</td><td>1,336</td><td>1,700</td><td>1,843</td><td>1,922</td></tr>
+<tr><td>txsbk</td><td>6,239</td><td>1,524</td><td>1,862</td><td>1,916</td><td>1,971</td></tr>
+<tr><td>ilnbk</td><td>917</td><td>1,363</td><td>1,742</td><td>1,881</td><td>1,982</td></tr>
+<tr><td>flmbk</td><td>606</td><td>981</td><td>1,304</td><td>1,849</td><td>1,939</td></tr>
+<tr><td>insbk</td><td>396</td><td>1,536</td><td>1,881</td><td>1,935</td><td>2,013</td></tr>
+<tr><td>kyebk</td><td>243</td><td>1,750</td><td>1,855</td><td>1,890</td><td>1,941</td></tr>
+<tr><td>kywbk</td><td>200</td><td>1,785</td><td>1,863</td><td>1,922</td><td>2,031</td></tr>
+</tbody>
+</table>
+
+<div class="dl">
+<strong>Download the data (CC BY 4.0):</strong><br>
+<a href="/data/filing_lag_by_chapter.csv">filing_lag_by_chapter.csv</a>
+<a href="/data/filing_lag_ch7_by_district.csv">filing_lag_ch7_by_district.csv</a>
+<a href="/data/filing_lag_ch13_by_district.csv">filing_lag_ch13_by_district.csv</a>
+</div>
+
+<h2>Notable patterns</h2>
+<ul>
+<li><strong>Minnesota Ch.7 has implausibly tight lag.</strong> p25 = 90, p90 = 102 days. Twelve-day spread across 90% of cases. The cleanest, tightest discharge pipeline in the corpus &mdash; possibly indicating a streamlined no-asset process.</li>
+<li><strong>Texas Southern Ch.7 p90 = 469 days.</strong> Long tail compared to comparable-volume districts. Florida Southern p90 = 284 days; Missouri Western p90 = 225 days.</li>
+<li><strong>Ch.13 lags cluster near the 60-month statutory plan max.</strong> Most p90 values exceed 1,920 days (5.26 years). Plans that complete are completing at the wire, not early.</li>
+<li><strong>Eastern Kentucky and Western Kentucky Ch.13 p25 = 1,750-1,785 days.</strong> Even the bottom quartile of completed cases is 4.8+ years. Plans don't end early in those districts.</li>
+</ul>
+
+<h2>Methodology</h2>
+<p>Source: 220,037 federal bankruptcy cases. Filtered for cases with non-null date_filed and date_discharged. Capped at 5,000 days (negative or extreme outliers excluded). Only cases that actually received discharge are in the population &mdash; dismissed cases are excluded by design.</p>
+
+<p><strong>Survivorship caveat.</strong> This dataset captures lag among cases that completed. Cases that dismissed don't appear here. A district with high dismissal rate could have either fast discharges (because slow cases drop out) or slow discharges (because the system is sticky); cross-reference with our <a href="/quick-dismissal/">quick-dismissal dataset</a> to disentangle.</p>
+
+<p><a href="/">&larr; Back to viz hub</a> | <a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">View on GitHub</a></p>
+</body>
+</html>
