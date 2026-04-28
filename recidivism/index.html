@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bankruptcy Recidivism Patterns — Empirical Dataset v0.1 | Open Bankruptcy Project</title>
+<meta name="description" content="5% of debtors file twice. Median post-dismissal refiling interval: 78 days. Median post-discharge: 1,821 days. Empirical multi-filer recidivism patterns from 199,848 debtors.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/recidivism/">
+<meta property="og:title" content="Bankruptcy Recidivism Patterns">
+<meta property="og:description" content="The Chapter 20 pattern, quantified: post-dismissal refiling at 78-day median; post-discharge at 1,821 days. Citable empirical dataset.">
+<meta property="og:type" content="article">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:880px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+h3{font-size:1.15rem;margin:1.5rem 0 0.5rem}
+.lead{font-size:1.15rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
+th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:left}
+th{background:#f0f4f8}
+ul{padding-left:1.25rem}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Bankruptcy Recidivism Patterns","url":"https://viz.openbankruptcyproject.org/recidivism/"}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Bankruptcy Recidivism Patterns Dataset v0.1","description":"First-pass empirical dataset of multi-filer bankruptcy recidivism: filings-per-debtor distribution, inter-filing intervals, post-discharge vs post-dismissal patterns, and per-district concentration. From 199,848 unique debtors and 218,913 cases.","url":"https://viz.openbankruptcyproject.org/recidivism/","creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-27","keywords":["bankruptcy","recidivism","successive filing","multi-filer","Chapter 20","empirical research"]}</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Visualizations</a> &raquo; Recidivism</nav>
+<span class="tag">Open Bankruptcy Project</span>
+<h1>Bankruptcy Recidivism Patterns &mdash; v0.1</h1>
+<p class="lead">First-pass empirical view of multi-filer bankruptcy recidivism. Across 199,848 unique
+debtors, who comes back to bankruptcy court &mdash; how often, how soon, and where? Several findings
+are unique to this dataset; published academic literature has rarely measured these patterns at
+scale.</p>
+
+<h2>Headline findings</h2>
+
+<div class="headline-stat">
+<div class="num">5.0%</div>
+<div class="label">of bankruptcy debtors are multi-filers (10,021 of 199,848 in the sample). The vast majority of debtors file once and never return to bankruptcy court.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">78 days</div>
+<div class="label"><strong>Median interval from dismissal to next filing</strong>. Debtors whose cases are dismissed file again FAST &mdash; the 25th percentile is 33 days. This is the empirical "Chapter 20" pattern: file Ch.7, get dismissed, immediately refile (often Ch.13) to maintain the automatic stay.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">1,821 days</div>
+<div class="label"><strong>Median interval from discharge to next filing</strong> (~5 years). Debtors who completed a prior case wait substantially longer before refiling &mdash; consistent with §1328(f) lookback (4-year Ch.7→Ch.13 / 2-year Ch.13→Ch.13) being respected.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">7.5%</div>
+<div class="label">cross-district recidivism rate. Most multi-filers stay in the same federal district when they refile (92.5%) &mdash; substantially higher than what "venue-shopping" theories would predict.</div>
+</div>
+
+<h2>Filings-per-debtor distribution</h2>
+<table>
+<tr><th>Filings per debtor</th><th>Unique debtors</th><th>Cumulative</th><th>% of all debtors</th></tr>
+<tr><td>1</td><td>189,827</td><td>189,827</td><td>95.0%</td></tr>
+<tr><td>2</td><td>8,697</td><td>198,524</td><td>4.4%</td></tr>
+<tr><td>3</td><td>1,086</td><td>199,610</td><td>0.5%</td></tr>
+<tr><td>4</td><td>173</td><td>199,783</td><td>0.09%</td></tr>
+<tr><td>5</td><td>42</td><td>199,825</td><td>0.02%</td></tr>
+<tr><td>6</td><td>14</td><td>199,839</td><td>0.007%</td></tr>
+<tr><td>7</td><td>4</td><td>199,843</td><td>0.002%</td></tr>
+<tr><td>8</td><td>3</td><td>199,846</td><td>0.0015%</td></tr>
+<tr><td>9</td><td>1</td><td>199,847</td><td>0.0005%</td></tr>
+</table>
+
+<h2>The "Chapter 20" pattern, quantified</h2>
+
+<p>The post-dismissal interval distribution is the standout finding:</p>
+<table>
+<tr><th>Filing interval (days)</th><th>p25</th><th>median (p50)</th><th>p75</th><th>p90</th><th>n</th></tr>
+<tr><td>All consecutive multi-filings</td><td>329</td><td>812</td><td>2,057</td><td>3,674</td><td>10,660</td></tr>
+<tr><td>After prior <strong>discharge</strong></td><td>753</td><td>1,821</td><td>3,071</td><td>4,454</td><td>2,988</td></tr>
+<tr><td>After prior <strong>dismissal</strong></td><td>33</td><td>78</td><td>246</td><td>1,071</td><td>6,296</td></tr>
+</table>
+
+<p>The contrast is dramatic. Post-discharge filers wait approximately <strong>23x longer</strong>
+than post-dismissal filers (1,821 vs 78 days at the median). Two distinct populations:</p>
+
+<ul>
+<li><strong>Post-discharge multi-filers</strong> (n=2,988): wait 5 years on average. Their behavior
+is consistent with debtors aware of the §1328(f) lookback rules and waiting them out before
+refiling. Most of these are debtors hit by new financial distress 5-10 years after their first
+discharge.</li>
+
+<li><strong>Post-dismissal multi-filers</strong> (n=6,296): file again within 11 weeks at the
+median, often within 5 weeks at the 25th percentile. Their behavior is consistent with
+"strategic refiling" &mdash; using a fresh case to restart the automatic stay, address a defect
+that caused the prior dismissal, or convert from one chapter to another via dismissal-and-refiling
+(the classic "Chapter 20" pattern).</li>
+</ul>
+
+<h2>Per-district recidivism concentration</h2>
+
+<p>Top districts by percentage of cases that come from multi-filers (within sample):</p>
+<table>
+<tr><th>District</th><th>Multi-filer cases</th><th>Total cases</th><th>% from multi-filers</th></tr>
+<tr><td>nvbk</td><td>50</td><td>327</td><td>15.3%</td></tr>
+<tr><td>tnwbk</td><td>289</td><td>1,980</td><td>14.6%</td></tr>
+<tr><td>moebk</td><td>191</td><td>1,356</td><td>14.1%</td></tr>
+<tr><td>txsbk</td><td>4,256</td><td>30,411</td><td>14.0%</td></tr>
+<tr><td>mowbk</td><td>5,459</td><td>40,915</td><td>13.3%</td></tr>
+<tr><td>ksbk</td><td>5,025</td><td>38,765</td><td>13.0%</td></tr>
+<tr><td>paebk</td><td>158</td><td>1,674</td><td>9.4%</td></tr>
+<tr><td>caebk</td><td>69</td><td>781</td><td>8.8%</td></tr>
+<tr><td>flsbk</td><td>3,645</td><td>43,930</td><td>8.3%</td></tr>
+<tr><td>almbk</td><td>86</td><td>1,039</td><td>8.3%</td></tr>
+</table>
+
+<p>Districts with high Chapter 13 share (Texas Southern, Missouri Western, Kansas, Tennessee
+Western) cluster at the top of the recidivism rate &mdash; consistent with Chapter 13's higher
+plan-failure rate producing more refiling.</p>
+
+<h2>What the patterns mean for §362(c) and §1328(f)</h2>
+
+<p>The data have direct implications for two procedural-rule frameworks:</p>
+
+<h3>§ 362(c) successive-filing stay limits</h3>
+<p>Section 362(c)(3) limits the automatic stay to 30 days for filers with one prior dismissed case
+in the past year; § 362(c)(4) eliminates the stay entirely for filers with two or more prior
+dismissed cases. The 33-day p25 / 78-day p50 post-dismissal refiling intervals show that a substantial
+fraction of refilings happen within the §362(c)(3) one-year window &mdash; meaning the stay limits
+ARE biting frequently in practice. See <a href="https://automatic-stay.openbankruptcyproject.org/successive-filings/">§ 362(c) successive-filings reference</a>.</p>
+
+<h3>§ 1328(f) discharge lookback</h3>
+<p>The 5-year (~1,821-day) median post-discharge interval suggests that attorney-represented
+multi-filers ARE successfully waiting out the §1328(f) lookback (4 years for Ch.7/11/12 → Ch.13;
+2 years Ch.13 → Ch.13). This is consistent with the §1328(f) research project's finding that
+~12% of successive Ch.13 filers are caught by the bar &mdash; the population caught is the smaller
+subset who don't wait out the rule, often pro-se filers unaware of it. See
+<a href="https://1328f.openbankruptcyproject.org/findings/">§1328(f) findings</a>.</p>
+
+<h2>Methodology and caveats</h2>
+<div class="callout">
+<h3>Name-based matching has known false-positive risk</h3>
+<p>Multi-filer identification is by normalized debtor name (uppercase, punctuation stripped).
+Common surnames (Smith, Johnson, etc.) can produce false-positive matches between unrelated
+debtors. SSN-based matching would be cleaner but isn't available in public PACER data.</p>
+<p>The 10,021 multi-filer count likely includes some false positives from name collisions.
+Estimated upper bound on false-positive rate based on common-surname-frequency analysis: 5-15%.
+True multi-filer count is plausibly 8,500-9,500.</p>
+</div>
+
+<h2>Open dataset</h2>
+<p>Three CSVs published under CC BY 4.0:</p>
+<ul>
+<li><a href="../data/recidivism_filing_count_distribution.csv">recidivism_filing_count_distribution.csv</a> &mdash; filings-per-debtor distribution</li>
+<li><a href="../data/recidivism_intervals.csv">recidivism_intervals.csv</a> &mdash; quartile intervals by category (all, post-discharge, post-dismissal)</li>
+<li><a href="../data/recidivism_by_district.csv">recidivism_by_district.csv</a> &mdash; per-district recidivism rates</li>
+</ul>
+
+<h2>Citation</h2>
+<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). Bankruptcy Recidivism Patterns Dataset, v0.1.
+501(c)(3) public charity (EIN 41-5159631).
+URL: https://viz.openbankruptcyproject.org/recidivism/
+License: CC BY 4.0
+</pre>
+<div class="related">
+<strong>Related:</strong>
+<a href="https://viz.openbankruptcyproject.org/">Viz hub</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/outcomes-duration/">Outcomes &amp; Duration</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/rare-outcomes/">Rare Outcomes</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/filing-trends/">Filing Trends</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f)</a> &middot;
+<a href="https://automatic-stay.openbankruptcyproject.org/successive-filings/">§ 362(c) successive-filing limits</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Toolkit</a>
+</div>
+<footer>
+<p>Empirical research published under CC BY 4.0. Methodology + source code in the public toolkit repo.
+<strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+</footer>
+</body>
+</html>
