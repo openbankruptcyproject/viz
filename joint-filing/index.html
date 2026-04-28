@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Joint vs Individual Bankruptcy Filing Patterns — Empirical Dataset v0.1 | Open Bankruptcy Project</title>
+<meta name="description" content="35-year decline in joint filing. 20.7pp Ch.13 discharge advantage for joint filers. Great Recession spike but COVID none. Empirical patterns from 218,913 cases.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/joint-filing/">
+<meta property="og:title" content="Joint vs Individual Bankruptcy Filing Patterns">
+<meta property="og:description" content="35-year decline in joint filing. 20.7pp Chapter 13 discharge advantage for joint filers.">
+<meta property="og:type" content="article">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:1000px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+h3{font-size:1.15rem;margin:1.5rem 0 0.5rem}
+.lead{font-size:1.15rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.92rem}
+th,td{padding:0.4rem 0.6rem;border:1px solid #ddd;text-align:right}
+th{background:#f0f4f8;text-align:center}
+td:first-child{text-align:center;font-weight:600}
+ul{padding-left:1.25rem}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Joint vs Individual Bankruptcy Filing Patterns","url":"https://viz.openbankruptcyproject.org/joint-filing/"}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Joint vs Individual Bankruptcy Filing Patterns Dataset v0.1","description":"35-year empirical analysis of joint (couples) vs individual bankruptcy filings: declining joint-filing rate, joint-filer outcome advantage, and recession-effect differences. From 218,913 federal cases.","url":"https://viz.openbankruptcyproject.org/joint-filing/","creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-27","keywords":["bankruptcy","joint filing","household economics","Chapter 7","Chapter 13","empirical research","marriage and bankruptcy"]}</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Visualizations</a> &raquo; Joint Filing Patterns</nav>
+<span class="tag">Open Bankruptcy Project</span>
+<h1>Joint vs Individual Bankruptcy Filing Patterns</h1>
+<p class="lead">Empirical analysis of joint (couples filing together) vs. individual bankruptcy
+filings over 35 years. Three significant findings: a sustained decline in joint-filing rate, a
+substantial outcome advantage for joint Ch.13 filers, and divergent recession-effect patterns
+that reinforce the stimulus-blocked-bankruptcy thesis.</p>
+
+<h2>Three headline findings</h2>
+
+<div class="headline-stat">
+<div class="num">~65% relative decline</div>
+<div class="label">Chapter 7 joint-filing rate fell from 26.9% (1995) to 9.0% (2025). Chapter 13 fell from 28.5% to 13.9%. Tracks broader marriage-rate decline + post-divorce financial distress + single-household economics shift.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">+20.7 pp</div>
+<div class="label"><strong>Chapter 13 discharge-rate advantage for joint filers.</strong> Joint Ch.13: 57.6% complete the plan and discharge. Individual Ch.13: 36.9%. Dual-income stability funds 3-5 year plans more reliably.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">2009 vs 2020</div>
+<div class="label">Great Recession produced a joint-filing spike (Ch.7 joint rate jumped to 22.2% in 2009, up from 16.0% in 2007). COVID 2020 saw NO equivalent spike (11.7%) &mdash; consistent with stimulus + moratoriums preventing the cascading household financial distress that drives joint filing.</div>
+</div>
+
+<h2>The 35-year decline in joint filing</h2>
+
+<table>
+<tr><th>Year</th><th>Ch. 7 joint %</th><th>Ch. 13 joint %</th><th>Ch. 11 joint %</th></tr>
+<tr><td>1995</td><td>26.9%</td><td>28.5%</td><td>&mdash;</td></tr>
+<tr><td>2000</td><td>22.0%</td><td>19.2%</td><td>&mdash;</td></tr>
+<tr><td>2005</td><td>16.2%</td><td>15.0%</td><td>2.9%</td></tr>
+<tr><td>2009</td><td>22.2%</td><td>29.0%</td><td>6.5%</td></tr>
+<tr><td>2014</td><td>16.7%</td><td>20.7%</td><td>8.9%</td></tr>
+<tr><td>2019</td><td>12.0%</td><td>16.8%</td><td>0.0%</td></tr>
+<tr><td>2020</td><td>11.7%</td><td>19.2%</td><td>1.0%</td></tr>
+<tr><td>2024</td><td>7.8%</td><td>17.2%</td><td>0.7%</td></tr>
+<tr><td>2025</td><td>9.0%</td><td>13.9%</td><td>0.1%</td></tr>
+</table>
+
+<p>The decline is striking and sustained. Possible drivers:</p>
+<ul>
+<li><strong>Falling marriage rates</strong> &mdash; the U.S. marriage rate has declined from ~9 per
+1,000 (1995) to ~6 per 1,000 (2024). Fewer married couples means fewer joint filings, mechanically.</li>
+<li><strong>Post-divorce filings</strong> &mdash; bankruptcy is heavily concentrated among divorced
+individuals; the data may show the rising share of divorce-precipitated single filings.</li>
+<li><strong>Cohabitation without marriage</strong> &mdash; couples living together without legal
+marriage cannot file jointly under § 302; they file individually if they file at all.</li>
+<li><strong>Income instability shifts</strong> &mdash; the "1.5-earner household" pattern means
+financial distress hits one earner more often than both simultaneously.</li>
+</ul>
+
+<h2>The Chapter 13 outcome advantage</h2>
+
+<p>The 20.7 percentage point gap between joint and individual Chapter 13 discharge rates is one
+of the largest empirical disparities in the dataset:</p>
+
+<table>
+<tr><th>Cohort</th><th>Discharged</th><th>Dismissed</th><th>Total</th></tr>
+<tr><td>Joint Ch. 13 filers</td><td>57.6%</td><td>26.6%</td><td>19,501</td></tr>
+<tr><td>Individual Ch. 13 filers</td><td>36.9%</td><td>39.7%</td><td>78,613</td></tr>
+<tr><td>Joint Ch. 7 filers</td><td>95.9%</td><td>1.1%</td><td>18,284</td></tr>
+<tr><td>Individual Ch. 7 filers</td><td>83.7%</td><td>2.1%</td><td>83,821</td></tr>
+</table>
+
+<h3>Why the Ch.13 gap is so large</h3>
+
+<p>Several interrelated factors:</p>
+<ul>
+<li><strong>Income redundancy.</strong> Two earners means one job loss doesn't automatically default
+the plan. The plan typically continues even if one spouse experiences income disruption.</li>
+<li><strong>Expense efficiency.</strong> Joint households absorb fixed costs (housing, utilities,
+transportation) more efficiently per person, leaving more disposable income for plan payments.</li>
+<li><strong>Plan-payment reliability.</strong> The trustee's primary failure-mode trigger is missed
+plan payments. Joint households have more buffer against the income volatility that drives missed
+payments.</li>
+<li><strong>Lifecycle stability.</strong> Married joint filers tend to be older, more established,
+and more stable than the individual-filer population.</li>
+</ul>
+
+<p>The Ch.7 gap (12.2 percentage points) is smaller because Ch.7 doesn't depend on sustained
+income to complete &mdash; the discharge issues at ~104 days regardless of income stability.</p>
+
+<h2>The Great Recession vs. COVID divergence</h2>
+
+<p>Joint-filing rate moves with macroeconomic stress in measurable ways:</p>
+<ul>
+<li><strong>2007:</strong> Ch.7 joint rate at 16.0% (pre-recession baseline)</li>
+<li><strong>2009:</strong> Ch.7 joint rate at 22.2% (Great Recession peak; +6.2 pp surge)</li>
+<li><strong>2011:</strong> Ch.7 joint rate at 22.1% (sustained at recession-elevated level)</li>
+<li><strong>2019:</strong> Ch.7 joint rate at 12.0% (pre-pandemic, declining trend resumed)</li>
+<li><strong>2020:</strong> Ch.7 joint rate at 11.7% (NO spike during COVID economic shock)</li>
+<li><strong>2022:</strong> Ch.7 joint rate at 9.5% (continued decline)</li>
+</ul>
+
+<p>The Great Recession produced a clear joint-filing spike (+6.2 pp from 2007 to 2009): household
+financial distress hit dual-income couples simultaneously when the housing/credit crash spread
+across labor markets.</p>
+
+<p>COVID produced no equivalent spike. Direct stimulus payments, moratoriums, and forbearance
+programs prevented the cascading household-level distress that would have shown up as a joint-filing
+surge. This is empirically consistent with the
+<a href="../filing-trends/">overall filing-volume decline during 2020-2022</a> &mdash; another signature
+of stimulus-blocked-bankruptcy.</p>
+
+<h2>What the duration data show</h2>
+
+<p>Despite outcome differences, joint and individual filers complete their cases at essentially
+the same speed:</p>
+<table>
+<tr><th>Chapter</th><th>Cohort</th><th>p25 days</th><th>median</th><th>p75</th><th>n</th></tr>
+<tr><td>Ch. 7</td><td>joint</td><td>99</td><td>107</td><td>134</td><td>17,534</td></tr>
+<tr><td>Ch. 7</td><td>individual</td><td>98</td><td>104</td><td>125</td><td>70,149</td></tr>
+<tr><td>Ch. 13</td><td>joint</td><td>1,292</td><td>1,737</td><td>1,891</td><td>11,229</td></tr>
+<tr><td>Ch. 13</td><td>individual</td><td>1,280</td><td>1,722</td><td>1,890</td><td>28,972</td></tr>
+</table>
+
+<p>The duration similarity (joint vs individual within ~15 days median for both chapters) debunks
+the "joint cases take longer" intuition. Both chapters' procedural timelines drive the duration;
+joint vs. individual is not a meaningful predictor.</p>
+
+<h2>Methodology</h2>
+<div class="callout">
+<h3>The joint_flag classification</h3>
+<p>The bankruptcy court's case-record schema includes a <code>joint_flag</code> field that's set
+to 1 when both spouses file together under § 302 (joint case) and 0 otherwise. The classification
+is based on the petition's structural form and is reliable.</p>
+<p>Chapter 11 has very low joint-filing rates throughout because Chapter 11 is predominantly used
+by businesses (which can't file jointly) rather than by married consumers.</p>
+</div>
+
+<h2>Open dataset</h2>
+<ul>
+<li><a href="../data/joint_filing_by_year_chapter.csv">joint_filing_by_year_chapter.csv</a> &mdash; year-by-chapter time series</li>
+<li><a href="../data/joint_filing_by_district_chapter.csv">joint_filing_by_district_chapter.csv</a> &mdash; per-district patterns</li>
+<li><a href="../data/joint_filing_outcomes.csv">joint_filing_outcomes.csv</a> &mdash; outcome differential by cohort</li>
+</ul>
+
+<h2>Citation</h2>
+<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). Joint vs Individual Bankruptcy Filing Patterns Dataset, v0.1.
+501(c)(3) public charity (EIN 41-5159631).
+URL: https://viz.openbankruptcyproject.org/joint-filing/
+License: CC BY 4.0
+</pre>
+<div class="related">
+<strong>Related:</strong>
+<a href="https://viz.openbankruptcyproject.org/">Viz hub</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/outcomes-duration/">Outcomes</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/recidivism/">Recidivism</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/filing-trends/">Filing trends</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/rare-outcomes/">Rare outcomes</a> &middot;
+<a href="https://chapter-13.openbankruptcyproject.org/">Chapter 13</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Toolkit</a>
+</div>
+<footer>
+<p>Empirical research published under CC BY 4.0. Methodology + source code in the public toolkit repo.
+<strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+</footer>
+</body>
+</html>
