@@ -3,14 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bankruptcy Visualizations — Open Bankruptcy Project</title>
-<meta name="description" content="Empirical visualizations on U.S. consumer and small-business bankruptcy. CC BY 4.0. Data, methodology, and source code linked from each piece.">
+<title>Bankruptcy Empirical Datasets &mdash; Open Bankruptcy Project</title>
+<meta name="description" content="18 empirical datasets on U.S. federal bankruptcy. 220,037 cases analyzed. CC BY 4.0. Per-district, per-chapter, per-year breakdowns with downloadable CSVs.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://viz.openbankruptcyproject.org/">
-<meta property="og:title" content="Bankruptcy Visualizations — Open Bankruptcy Project">
-<meta property="og:description" content="Empirical visualizations on U.S. consumer and small-business bankruptcy. CC BY 4.0. Data, methodology, and source code linked from each piece.">
+<meta property="og:title" content="Bankruptcy Empirical Datasets &mdash; OBP">
+<meta property="og:description" content="18 empirical datasets on U.S. federal bankruptcy. 220,037 cases analyzed. CC BY 4.0.">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
@@ -20,98 +19,72 @@ h1{font-size:2.2rem;margin:0 0 0.5rem}
 h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
 h3{font-size:1.1rem;margin:1.5rem 0 0.5rem}
 .lead{font-size:1.15rem;color:#444;margin:0 0 2rem}
-.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem;text-transform:uppercase}
 .viz-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.5rem;margin:2rem 0}
 .viz-card{padding:1.5rem;background:#fff;border:1px solid #ddd;border-radius:6px;display:flex;flex-direction:column}
 .viz-card h3{margin-top:0}
 .viz-card .meta{font-size:0.85rem;color:#666;margin-bottom:0.75rem}
 .viz-card a{margin-top:auto;display:inline-block;padding:0.5rem 1rem;background:#0c5cb6;color:#fff;border-radius:4px;text-decoration:none;font-size:0.95rem;align-self:flex-start}
-.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;margin:1.5rem 0}
-nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
-nav.breadcrumb a{color:#0c5cb6}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1.5rem 0}
+.stat{background:#fff;border:1px solid #ddd;padding:1rem;border-radius:6px;text-align:center}
+.stat-num{font-size:2rem;font-weight:bold;color:#0c5cb6;display:block}
+.stat-label{font-size:0.85rem;color:#666}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;margin:1.5rem 0}
 footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
 a{color:#0c5cb6}
-img.full{max-width:100%;height:auto;border:1px solid #ddd;border-radius:4px;margin:1rem 0}
-.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;margin:1.5rem 0}
-table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
-th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:left}
-th{background:#f0f4f8}</style>
+</style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Bankruptcy Visualizations — Open Bankruptcy Project","description":"Empirical visualizations on U.S. consumer and small-business bankruptcy. CC BY 4.0. Data, methodology, and source code linked from each piece.","url":"https://viz.openbankruptcyproject.org/"}
+{"@context":"https://schema.org","@type":"DataCatalog","name":"OBP Bankruptcy Empirical Datasets","description":"Open empirical datasets on U.S. federal bankruptcy. 220,037 cases. CC BY 4.0.","url":"https://viz.openbankruptcyproject.org/","license":"https://creativecommons.org/licenses/by/4.0/","provider":{"@type":"Organization","name":"Open Bankruptcy Project","url":"https://openbankruptcyproject.org"}}
 </script>
 </head>
 <body>
-<span class="tag">Open Bankruptcy Project</span>
-<h1>Bankruptcy Visualizations</h1>
-<p class="lead">A growing portfolio of empirical visualizations on U.S. consumer
-and small-business bankruptcy. All charts and maps published under CC BY 4.0.
-Data, methodology, and source code are linked from each piece.</p>
+<span class="tag">Empirical Research</span>
+<h1>Bankruptcy Empirical Datasets</h1>
+<p class="lead">18 datasets covering U.S. federal bankruptcy. Every dataset is downloadable as CSV under CC BY 4.0. Source code is on <a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">GitHub</a>. Methodology + caveats live with each dataset.</p>
 
-<div class="viz-grid">
-
-<div class="viz-card">
-<h3>The $63 Billion Tower</h3>
-<p class="meta">20 years of U.S. bankruptcy fees, visualized</p>
-<p>Americans paid an estimated $63 billion in bankruptcy attorney and filing fees
-over the last 20 years, across 34.9 million cases. Stacked as $100 bills, that's
-a tower 43 miles tall &mdash; higher than any plane will ever fly.</p>
-<a href="https://openbankruptcyproject.org/63-billion-dollar-tower.html">View →</a>
+<div class="stats">
+<div class="stat"><span class="stat-num">220,037</span><span class="stat-label">Cases analyzed</span></div>
+<div class="stat"><span class="stat-num">18</span><span class="stat-label">Datasets</span></div>
+<div class="stat"><span class="stat-num">50+</span><span class="stat-label">CSV files</span></div>
+<div class="stat"><span class="stat-num">CC BY 4.0</span><span class="stat-label">License</span></div>
 </div>
-
-<div class="viz-card">
-<h3>Chapter 13 Dismissal Rate by District</h3>
-<p class="meta">FY2023 BAPCPA Table 6 / 90 federal bankruptcy districts</p>
-<p>Choropleth map of Chapter 13 dismissal rates across all 90 federal bankruptcy
-districts. Source: BAPCPA Table 6, FY2023 Administrative Office data.
-Range: ~25% to ~85%.</p>
-<a href="dismissal-rate-by-district/">View →</a>
-</div>
-
-<div class="viz-card">
-<h3>Subchapter V Adoption Curve</h3>
-<p class="meta">Q1 2020 to present, monthly volume</p>
-<p>Subchapter V was created by the Small Business Reorganization Act of 2019,
-effective February 2020. Adoption pattern shows pandemic-era debt-ceiling
-expansion, sunset, and post-sunset stabilization.</p>
-<a href="subv-adoption-curve/">View →</a>
-</div>
-
-</div>
-
-<h2>About this portfolio</h2>
-<p>The Open Bankruptcy Project publishes visualizations to make federal
-bankruptcy data accessible to journalists, researchers, advocates, and
-borrowers. Every chart is sourced from public data: the Administrative Office
-of the U.S. Courts, the Federal Judicial Center, BAPCPA Table 6, the National
-Bankruptcy Research Center, CourtListener / RECAP, and direct PACER pulls.</p>
-
-<p>If you want to use a visualization in journalism, academic work, or
-advocacy: please do. CC BY 4.0 means free use with attribution. If you'd like
-data behind a chart that isn't already published, contact us at
-<a href="mailto:research@openbankruptcyproject.org">research@openbankruptcyproject.org</a>.</p>
 
 <div class="callout">
-<h3>Coming soon</h3>
-<ul>
-<li>Per-district filing volume map (Ch7, Ch13, Ch11, Sub V) with year slider 2008-2026</li>
-<li>Filing-fee history timeline 2000-2026 (Ch7, Ch13, Ch11)</li>
-<li>National § 523(a)(8) AP filing rate trend 2008-2026</li>
-<li>Trustee fee distributions across districts</li>
-</ul>
+<strong>For researchers, journalists, and policy analysts.</strong> All data sourced from PACER 2008-2026. Schema.org Dataset markup on every page so Google Dataset Search can index. CSVs mirrored to the <a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">obp-empirical-toolkit</a> GitHub repo for citation stability.
 </div>
-<div class="related">
-<strong>Related:</strong>
-<a href="https://openbankruptcyproject.org/">OBP home</a> &middot;
-<a href="https://1328f.com/">Discharge screener (1328f.com)</a> &middot;
-<a href="https://523a8.openbankruptcyproject.org/">§ 523(a)(8) research</a> &middot;
-<a href="https://eidl.openbankruptcyproject.org/">EIDL hub</a>
+
+<h2>All datasets</h2>
+<div class="viz-grid">
+<div class="viz-card"><h3>Sec. 1328(f) Successive Filing</h3><div class="meta">doctrine · 1,018 lookback-caught cases</div><a href="/1328f/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Disposition + Duration</h3><div class="meta">core · 218,913 cases: outcomes & timing</div><a href="/disposition-duration/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Rare Outcomes (727(a)/727(d)/707(b)/1328(b))</h3><div class="meta">doctrine · 1,119 doctrinal-lever cases</div><a href="/rare-outcomes/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Filing Volume (35-year time series)</h3><div class="meta">trends · BAPCPA + recession + COVID effects</div><a href="/filing-volume/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Multi-Filer Recidivism</h3><div class="meta">patterns · 10,021 multi-filers, 199,848 unique debtors</div><a href="/recidivism/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Joint vs Individual Filing</h3><div class="meta">patterns · 35-year couples-filing trend</div><a href="/joint-filing/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Case Reopening Patterns</h3><div class="meta">patterns · 5,138 reopened cases</div><a href="/reopening/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Filing Seasonality</h3><div class="meta">patterns · Month/DOW/DOM patterns</div><a href="/seasonality/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>District Outcome Fingerprints</h3><div class="meta">geographic · Per-district outcome mix</div><a href="/district-profiles/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Discharge Rate Trends</h3><div class="meta">trends · Year-over-year, BAPCPA cohorts</div><a href="/discharge-trends/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>First vs Recidivist Filer Outcomes</h3><div class="meta">patterns · Outcome differential by filing position</div><a href="/first-vs-recidivist/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Adversary Proceeding Patterns</h3><div class="meta">doctrine · 5,577 APs, dispositions + rates</div><a href="/ap-patterns/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Filing-Fee Failure Patterns</h3><div class="meta">access · 2,749 cases: 99.2% are Ch.13 plan defaults</div><a href="/fee-failure/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Discharge Withholding</h3><div class="meta">access · 817 cases: missed cert, lost discharge</div><a href="/withholding/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Quick-Dismissal Patterns (≤30 days)</h3><div class="meta">access · 1,268 cases dismissed in &le;30 days</div><a href="/quick-dismissal/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Long-Pending Zombie Cases</h3><div class="meta">data-quality · 2,065 cases pending 5+ years, no closure</div><a href="/long-pending/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Divisional Office Patterns</h3><div class="meta">geographic · 204 offices, 36% &ndash; 93% discharge spread</div><a href="/divisional/">View dataset &rarr;</a></div>
+<div class="viz-card"><h3>Filing-to-Discharge Lag Distribution</h3><div class="meta">core · 128K cases, full percentile breakdown</div><a href="/filing-lag/">View dataset &rarr;</a></div>
 </div>
+
+<h2>How to cite</h2>
+<p>Open Bankruptcy Project. <em>Bankruptcy Empirical Datasets</em>. 2026. https://viz.openbankruptcyproject.org/. CC BY 4.0.</p>
+
+<h2>Methodology overview</h2>
+<p>Source: 220,037 federal bankruptcy cases harvested from PACER (2008-2026). Court codes follow PACER conventions (e.g., <code>flsbk</code> = U.S. Bankruptcy Court, Southern District of Florida; <code>mowbk</code> = U.S. Bankruptcy Court, Western District of Missouri). Dispositions are administrative classifications, not legal holdings; researchers seeking case-level legal reasoning should pull underlying dockets.</p>
+
+<p>Per-dataset methodology, sample sizes, and caveats are documented on each dataset page. Source code: <a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">obp-empirical-toolkit</a>.</p>
+
 <footer>
-<p>All visualizations published under CC BY 4.0. Methodology and source data
-documented inline. Powered by public datasets from Federal Judicial Center,
-Administrative Office of U.S. Courts, BAPCPA Table 6, and CourtListener.</p>
-<p><strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity
-(EIN 41-5159631). <a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+<p>Open Bankruptcy Project · 501(c)(3) public charity (EIN 41-5159631) · <a href="https://openbankruptcyproject.org">openbankruptcyproject.org</a> · CC BY 4.0</p>
 </footer>
 </body>
 </html>
