@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Divisional Office Patterns | OBP Empirical Research</title>
+<meta name="description" content="204 federal bankruptcy divisional offices: per-office case mix and discharge rates ranging from 36% to 93%. Below-district granularity.">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/divisional/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Federal Bankruptcy Divisional Office Patterns",
+  "description": "Per-office case mix and discharge rate analysis across 204 divisional offices in federal bankruptcy courts. Reveals below-district variation that district-level aggregation hides.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {"@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://openbankruptcyproject.org"}
+}
+</script>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:980px;margin:2rem auto;padding:0 1.2rem;line-height:1.6;color:#222}
+h1{color:#0a3d62}
+h2{color:#0a3d62;margin-top:2rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
+.stat{background:#f5f7fa;padding:1rem;border-radius:6px;border-left:4px solid #0a3d62}
+.stat-num{font-size:2rem;font-weight:bold;color:#0a3d62}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.92em}
+th,td{padding:6px 10px;text-align:left;border-bottom:1px solid #ddd}
+th{background:#0a3d62;color:#fff}
+.note{background:#fffbe6;padding:1rem;border-left:4px solid #f1c40f;margin:1rem 0}
+a{color:#0a3d62}
+.dl{background:#e8f4f8;padding:1rem;border-radius:6px;margin:1.5rem 0}
+.dl a{display:inline-block;margin-right:1rem;font-weight:bold}
+</style>
+</head>
+<body>
+<p><a href="/">&larr; Back to viz hub</a></p>
+<h1>Divisional Office Patterns</h1>
+<p>Federal bankruptcy courts are organized by district, but each district contains multiple divisional offices. <strong>Our corpus has 204 unique divisional offices.</strong> District-level aggregation hides systematic variation between courthouse divisions.</p>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">204</div>Divisional offices in our corpus</div>
+  <div class="stat"><div class="stat-num">36% &ndash; 93%</div>Discharge rate range across top-30 offices</div>
+  <div class="stat"><div class="stat-num">94.5%</div>Highest Ch.13 mix in any office (innbk-2)</div>
+  <div class="stat"><div class="stat-num">4.0%</div>Lowest Ch.13 mix in any office (mabk-4)</div>
+</div>
+
+<div class="note">
+<strong>Why this matters.</strong> Two offices in the same district can have radically different case mixes and outcomes. The Eastern District of Missouri has offices with 27% Ch.13 mix and others with 54%. Researchers using district-level data may miss this. The PACER case_office field is opaque (just an integer), but the distribution of cases across offices is itself informative.
+</div>
+
+<h2>Top 20 divisional offices by volume</h2>
+<table>
+<thead><tr><th>Court</th><th>Office</th><th>Total</th><th>Ch.7</th><th>Ch.13</th><th>Ch.13 %</th><th>Discharge rate</th></tr></thead>
+<tbody>
+<tr><td>mowbk</td><td>4</td><td>30,430</td><td>13,773</td><td>15,990</td><td>52.5%</td><td>69.0%</td></tr>
+<tr><td>txsbk</td><td>4</td><td>29,642</td><td>11,187</td><td>18,220</td><td>61.5%</td><td>57.4%</td></tr>
+<tr><td>flsbk</td><td>1</td><td>22,859</td><td>11,753</td><td>8,639</td><td>37.8%</td><td>65.6%</td></tr>
+<tr><td>ksbk</td><td>2</td><td>22,344</td><td>10,596</td><td>11,228</td><td>50.3%</td><td>75.4%</td></tr>
+<tr><td>flsbk</td><td>9</td><td>10,699</td><td>3,853</td><td>6,301</td><td>58.9%</td><td>69.5%</td></tr>
+<tr><td>flsbk</td><td>0</td><td>10,374</td><td>5,312</td><td>4,330</td><td>41.7%</td><td>64.9%</td></tr>
+<tr><td>ksbk</td><td>5</td><td>9,424</td><td>2,793</td><td>6,550</td><td>69.5%</td><td>71.5%</td></tr>
+<tr><td>ilnbk</td><td>1</td><td>7,116</td><td>4,484</td><td>2,494</td><td>35.0%</td><td>75.6%</td></tr>
+<tr><td>ksbk</td><td>6</td><td>6,999</td><td>4,465</td><td>2,416</td><td>34.5%</td><td>83.1%</td></tr>
+<tr><td>mowbk</td><td>6</td><td>6,384</td><td>4,505</td><td>1,739</td><td>27.2%</td><td>87.1%</td></tr>
+<tr><td>ohnbk</td><td>1</td><td>4,168</td><td>3,223</td><td>266</td><td>6.4%</td><td>77.5%</td></tr>
+<tr><td>cacbk</td><td>2</td><td>2,557</td><td>2,134</td><td>377</td><td>14.7%</td><td>86.6%</td></tr>
+<tr><td>cacbk</td><td>6</td><td>2,032</td><td>1,811</td><td>218</td><td>10.7%</td><td>91.8%</td></tr>
+<tr><td>nyebk</td><td>1</td><td>1,055</td><td>991</td><td>57</td><td>5.4%</td><td>93.4%</td></tr>
+<tr><td>insbk</td><td>1</td><td>999</td><td>229</td><td>760</td><td>76.1%</td><td>46.9%</td></tr>
+<tr><td>njbk</td><td>2</td><td>1,202</td><td>369</td><td>784</td><td>65.2%</td><td>36.4%</td></tr>
+<tr><td>tnwbk</td><td>2</td><td>1,304</td><td>451</td><td>812</td><td>62.3%</td><td>43.5%</td></tr>
+</tbody>
+</table>
+
+<div class="dl">
+<strong>Download the data (CC BY 4.0):</strong><br>
+<a href="/data/divisional_offices.csv">divisional_offices.csv</a>
+<a href="/data/divisional_offices_outcomes.csv">divisional_offices_outcomes.csv</a>
+</div>
+
+<h2>What jumps out</h2>
+<ul>
+<li><strong>The Ch.13-heavy offices have lower discharge rates.</strong> innbk-1 (76% Ch.13 mix) discharges 47%; nyebk-1 (5% Ch.13 mix) discharges 93%. This is mostly mechanical &mdash; Ch.13 has a 5-year completion bar &mdash; but the gap is wider than chapter-mix alone explains.</li>
+<li><strong>Same-district variation.</strong> Within Kansas: office 2 discharges 75%, office 5 discharges 71.5%, office 6 discharges 83.1%. Same federal judges, same local rules, different outcomes.</li>
+<li><strong>Some offices are functionally Ch.7-only.</strong> ohnbk office 1: 6.4% Ch.13 mix. nyebk office 1: 5.4%. mabk office 4: 4.0%.</li>
+<li><strong>And some are functionally Ch.13-only.</strong> innbk office 2: 94.5% Ch.13. ksbk office 5: 69.5%.</li>
+</ul>
+
+<h2>Methodology</h2>
+<p>Source: 220,037 federal bankruptcy cases. Filtered for cases with non-null case_office. Office numbers are PACER-internal codes within each district; correspondence to physical courthouse divisions can be inferred from court websites but is not standardized. "Discharge rate" sums all dispositions starting with "Discharge" excluding "Withheld", "Denied", "Revoked", "Waived"; "Dismissed rate" sums all dispositions starting with "Dismissed".</p>
+
+<p><a href="/">&larr; Back to viz hub</a> | <a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">View on GitHub</a></p>
+</body>
+</html>
