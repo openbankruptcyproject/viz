@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bankruptcy Adversary Proceeding Patterns — Empirical Dataset v0.1 | Open Bankruptcy Project</title>
+<meta name="description" content="5,577 APs analyzed. 57.7% end in dismissed/settled without judgment. Only 5% reach substantive merits. 20x variation in district AP rates.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/ap-patterns/">
+<meta property="og:title" content="Bankruptcy Adversary Proceeding Patterns">
+<meta property="og:description" content="AP litigation is settlement-driven: 57.7% end without judgment, only 5% reach merits.">
+<meta property="og:type" content="article">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:880px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+h3{font-size:1.15rem;margin:1.5rem 0 0.5rem}
+.lead{font-size:1.15rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
+th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:right}
+th{background:#f0f4f8;text-align:center}
+td:first-child{text-align:center;font-weight:600}
+ul{padding-left:1.25rem}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Bankruptcy Adversary Proceeding Patterns","url":"https://viz.openbankruptcyproject.org/ap-patterns/"}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Bankruptcy Adversary Proceeding Patterns Dataset v0.1","description":"5,577 adversary proceedings analyzed: 57.7% end in dismissed/settled without judgment, 20x variation in district filing rates, 181-day median duration. Empirical patterns from 1987-2026.","url":"https://viz.openbankruptcyproject.org/ap-patterns/","creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-27","keywords":["bankruptcy","adversary proceeding","§ 523","§ 727","empirical research"]}</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Visualizations</a> &raquo; AP Patterns</nav>
+<span class="tag">Open Bankruptcy Project</span>
+<h1>Bankruptcy Adversary Proceeding Patterns &mdash; Empirical Dataset v0.1</h1>
+<p class="lead">5,577 adversary proceedings analyzed. AP litigation in bankruptcy is overwhelmingly
+settlement-driven, with 20x variation in filing rates across districts and a clear post-2012
+volume decline. Most academic literature on APs works from individual case studies; this is
+empirical pattern-recognition at scale.</p>
+
+<h2>Headline findings</h2>
+
+<div class="headline-stat">
+<div class="num">57.7%</div>
+<div class="label"><strong>APs ending in "Dismissed or Settled Without Entry of Judgment"</strong> (3,217 of 5,577). The dominant AP outcome is procedural exit before merits determination &mdash; settlement, voluntary dismissal, or procedural deficiency. Substantive merits adjudication is the minority outcome.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">~5%</div>
+<div class="label"><strong>APs reaching substantive merits ruling</strong> (173 bench trials + 78 summary judgments = 4.5% of all APs). The vast majority of AP litigation never produces a written opinion on the underlying legal merits.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">20x</div>
+<div class="label"><strong>variation in AP filing rates across districts.</strong> Ohio Northern (ohnbk) files 18.97 APs per 100 main cases. New Jersey (njbk) files 0.86 per 100. The procedural same-statute system produces wildly different AP intensity by venue.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">181 days</div>
+<div class="label">Median AP duration from filing to termination. AP litigation is faster than Ch.13 cases (1,728 day median) but slower than Ch.7 (104 days). Most APs resolve within 6 months.</div>
+</div>
+
+<h2>The disposition distribution</h2>
+
+<table>
+<tr><th>Disposition</th><th>Count</th><th>Share of APs</th></tr>
+<tr><td>Dismissed or Settled Without Entry of Judgment</td><td>3,217</td><td>57.7%</td></tr>
+<tr><td>Judgment Entered by Default</td><td>917</td><td>16.4%</td></tr>
+<tr><td>Judgment Entered on Consent</td><td>414</td><td>7.4%</td></tr>
+<tr><td>Judgment Entered after Bench Trial</td><td>173</td><td>3.1%</td></tr>
+<tr><td>Transfer to Another District</td><td>84</td><td>1.5%</td></tr>
+<tr><td>Dismissed for Want of Prosecution</td><td>78</td><td>1.4%</td></tr>
+<tr><td>Judgment Entered on Summary Judgment</td><td>78</td><td>1.4%</td></tr>
+<tr><td>Other</td><td>67</td><td>1.2%</td></tr>
+<tr><td>Judgment Entered (Other)</td><td>63</td><td>1.1%</td></tr>
+<tr><td>Transferred to District Court for Jury Trial</td><td>46</td><td>0.8%</td></tr>
+</table>
+
+<h2>What this tells us about AP litigation</h2>
+
+<p>The 57.7% "dismissed or settled without judgment" rate is the most striking finding. Several
+implications:</p>
+
+<ul>
+<li><strong>AP filings function primarily as leverage for settlement</strong>, not as paths to
+substantive judicial decisions. Plaintiffs file APs to bring defendants to the table; once
+settlement happens, the AP gets dismissed or settled without judgment.</li>
+
+<li><strong>Default judgments (16.4%) reflect non-responding defendants.</strong> When defendants
+don't appear, the plaintiff gets default. This includes pro-se debtors who don't know how to
+respond to AP service.</li>
+
+<li><strong>Consent judgments (7.4%) capture negotiated outcomes</strong> where the parties want
+the judgment entered (e.g., for collateral-estoppel effect, for federal-court enforcement leverage,
+or for non-dischargeability rulings the parties have negotiated).</li>
+
+<li><strong>Bench trials are rare (3.1%)</strong>. The median bankruptcy judge sees fewer than 5
+AP bench trials per year across all dispositions in their court.</li>
+</ul>
+
+<h2>The 20x district variation</h2>
+
+<p>The dataset shows enormous district-level variation in AP filing rates per main case:</p>
+
+<table>
+<tr><th>District</th><th>APs</th><th>Main cases (Ch.7+13+11)</th><th>AP rate per 100</th></tr>
+<tr><td>Ohio Northern</td><td>672</td><td>3,542</td><td>18.97</td></tr>
+<tr><td>Connecticut</td><td>12</td><td>114</td><td>10.53</td></tr>
+<tr><td>NY Southern</td><td>12</td><td>116</td><td>10.34</td></tr>
+<tr><td>Maryland</td><td>59</td><td>842</td><td>7.01</td></tr>
+<tr><td>Florida Southern</td><td>2,648</td><td>41,271</td><td>6.42</td></tr>
+<tr><td>Ohio Southern</td><td>35</td><td>578</td><td>6.06</td></tr>
+<tr><td>Virginia Eastern</td><td>74</td><td>1,262</td><td>5.86</td></tr>
+<tr><td>Massachusetts</td><td>65</td><td>1,375</td><td>4.73</td></tr>
+<tr><td>Florida Middle</td><td>152</td><td>5,545</td><td>2.74</td></tr>
+<tr><td>Tennessee Western</td><td>41</td><td>1,939</td><td>2.11</td></tr>
+<tr><td>Missouri Western</td><td>734</td><td>41,513</td><td>1.77</td></tr>
+<tr><td>Kansas</td><td>522</td><td>41,087</td><td>1.27</td></tr>
+<tr><td>California Central</td><td>55</td><td>5,883</td><td>0.93</td></tr>
+<tr><td>Illinois Northern</td><td>91</td><td>10,070</td><td>0.90</td></tr>
+<tr><td>New Jersey</td><td>14</td><td>1,633</td><td>0.86</td></tr>
+</table>
+
+<p>What drives this variation:</p>
+<ul>
+<li><strong>Local trustee culture</strong>: districts with aggressive U.S. Trustees file more § 707(b) abuse motions and § 727 discharge denial APs.</li>
+<li><strong>Bar composition</strong>: districts with active consumer-protection bar file more § 523(a) non-dischargeability APs on behalf of harmed creditors.</li>
+<li><strong>Local rule choice</strong>: some districts incorporate AP procedures into the main case; others require separate AP filings.</li>
+<li><strong>Trustee compensation structure</strong>: § 326 fee caps on trustees may incentivize AP filings (where additional services produce additional compensation) more in some districts than others.</li>
+</ul>
+
+<h2>The volume trend</h2>
+
+<p>AP filings climbed steadily from sub-100/year in the early 1990s to peak ~370-394/year in
+2010-2012, then declined sharply post-2014:</p>
+
+<ul>
+<li>1990s: 26-116/year (steady growth)</li>
+<li>2002-2005: 179-208/year (pre-BAPCPA)</li>
+<li>2006: 394 (BAPCPA-implementation spike)</li>
+<li>2007-2009: 156-268 (post-BAPCPA stabilization)</li>
+<li>2010-2013: 308-378 (sustained peak; recession-era contentiousness)</li>
+<li>2014-2018: 107-276 (declining)</li>
+<li>2019-2026: 33-104 (low; pandemic-era decline)</li>
+</ul>
+
+<p>The 2010-2013 peak corresponds to high foreclosure-crisis-era contentiousness; the 2014+ decline
+parallels overall bankruptcy filing volume declining; the 2020+ low reflects COVID-era court
+delays + reduced filing volumes.</p>
+
+<h2>Implications for AP practice</h2>
+
+<p>For practitioners:</p>
+<ul>
+<li><strong>Settlement is the modal outcome.</strong> AP filings should be drafted with settlement
+posture in mind from day one; substantive briefing should reserve resources until necessary.</li>
+<li><strong>District-specific AP rate is informative</strong>. A creditor evaluating whether to
+file an AP in a high-AP-rate district faces different procedural-context expectations than in a
+low-AP-rate district.</li>
+<li><strong>Default judgment is common (16.4%).</strong> AP plaintiffs should be prepared to
+pursue defaults expeditiously; AP defendants should treat AP service seriously.</li>
+</ul>
+
+<h2>Open dataset</h2>
+<ul>
+<li><a href="../data/ap_by_district.csv">ap_by_district.csv</a> &mdash; per-district AP volume + rate per main case</li>
+<li><a href="../data/ap_by_year.csv">ap_by_year.csv</a> &mdash; year-over-year AP volume</li>
+<li><a href="../data/ap_dispositions.csv">ap_dispositions.csv</a> &mdash; AP outcome distribution</li>
+</ul>
+
+<h2>Citation</h2>
+<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). Bankruptcy Adversary Proceeding Patterns Dataset, v0.1.
+501(c)(3) public charity (EIN 41-5159631).
+URL: https://viz.openbankruptcyproject.org/ap-patterns/
+License: CC BY 4.0
+</pre>
+<div class="related">
+<strong>Related:</strong>
+<a href="https://viz.openbankruptcyproject.org/">Viz hub</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/outcomes-duration/">Outcomes</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/rare-outcomes/">Rare outcomes</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/district-profiles/">District profiles</a> &middot;
+<a href="https://523a8.openbankruptcyproject.org/">§ 523(a)(8) AP research</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Toolkit</a>
+</div>
+<footer>
+<p>Empirical research published under CC BY 4.0. Methodology + source code in the public toolkit repo.
+<strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+</footer>
+</body>
+</html>
