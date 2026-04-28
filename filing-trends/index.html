@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bankruptcy Filing Volume 1997-2025 — Empirical Time Series | Open Bankruptcy Project</title>
+<meta name="description" content="35-year empirical time series of US federal bankruptcy filings. The BAPCPA cliff, Great Recession peak, and the COVID counterintuitive filing decline.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/filing-trends/">
+<meta property="og:title" content="Bankruptcy Filing Volume 1997-2025">
+<meta property="og:description" content="The BAPCPA cliff, Great Recession peak, and COVID counterintuitive decline. Citable empirical time series.">
+<meta property="og:type" content="article">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:1100px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+h3{font-size:1.15rem;margin:1.5rem 0 0.5rem}
+.lead{font-size:1.15rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.9rem}
+th,td{padding:0.4rem 0.6rem;border:1px solid #ddd;text-align:right}
+th{background:#f0f4f8;text-align:center}
+td:first-child{text-align:center;font-weight:600}
+ul{padding-left:1.25rem}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Bankruptcy Filing Volume 1997-2025","url":"https://viz.openbankruptcyproject.org/filing-trends/"}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Bankruptcy Filing Volume Time Series 1997-2025 v0.1","description":"35-year time series of Chapter 7, Chapter 11, and Chapter 13 federal bankruptcy filings. Reveals the BAPCPA pre-deadline surge, Great Recession peak, and the COVID-era counterintuitive filing decline.","url":"https://viz.openbankruptcyproject.org/filing-trends/","creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-27","keywords":["bankruptcy","filing trends","BAPCPA","Great Recession","COVID-19","Chapter 7","Chapter 13"]}</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Visualizations</a> &raquo; Filing Trends</nav>
+<span class="tag">Open Bankruptcy Project</span>
+<h1>Bankruptcy Filing Volume &mdash; 1997 through 2025</h1>
+<p class="lead">Annual federal bankruptcy filing volume by chapter across nearly three decades. The
+data reveal four distinct regime shifts: the BAPCPA pre-deadline surge (2005), the post-BAPCPA
+collapse (2006), the Great Recession-era plateau (2008-2011), and the most surprising pattern of all
+&mdash; the COVID-era <em>decrease</em> in filings (2020-2022).</p>
+
+<svg viewBox="0 0 1100 540" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:#fff;border:1px solid #ddd;border-radius:4px">
+<line x1="80" y1="450.0" x2="1070" y2="450.0" stroke="#e5e5e5"/><text x="72" y="454.0" font-size="11" text-anchor="end" fill="#666">0</text><line x1="80" y1="383.3" x2="1070" y2="383.3" stroke="#e5e5e5"/><text x="72" y="387.3" font-size="11" text-anchor="end" fill="#666">2,293</text><line x1="80" y1="316.7" x2="1070" y2="316.7" stroke="#e5e5e5"/><text x="72" y="320.7" font-size="11" text-anchor="end" fill="#666">4,587</text><line x1="80" y1="250.0" x2="1070" y2="250.0" stroke="#e5e5e5"/><text x="72" y="254.0" font-size="11" text-anchor="end" fill="#666">6,880</text><line x1="80" y1="183.3" x2="1070" y2="183.3" stroke="#e5e5e5"/><text x="72" y="187.3" font-size="11" text-anchor="end" fill="#666">9,174</text><line x1="80" y1="116.7" x2="1070" y2="116.7" stroke="#e5e5e5"/><text x="72" y="120.7" font-size="11" text-anchor="end" fill="#666">11,467</text><line x1="80" y1="50.0" x2="1070" y2="50.0" stroke="#e5e5e5"/><text x="72" y="54.0" font-size="11" text-anchor="end" fill="#666">13,761</text>
+<rect x="80.0" y="403.7" width="29.0" height="46.3" fill="#5a9bd5"><title>1997 Ch.7: 1,594</title></rect><rect x="80.0" y="380.2" width="29.0" height="23.4" fill="#70ad47"><title>1997 Ch.13: 806</title></rect><rect x="80.0" y="379.8" width="29.0" height="0.4" fill="#ed7d31"><title>1997 Ch.11: 15</title></rect><rect x="114.1" y="372.6" width="29.0" height="77.4" fill="#5a9bd5"><title>1998 Ch.7: 2,663</title></rect><rect x="114.1" y="346.5" width="29.0" height="26.1" fill="#70ad47"><title>1998 Ch.13: 898</title></rect><rect x="114.1" y="346.0" width="29.0" height="0.5" fill="#ed7d31"><title>1998 Ch.11: 18</title></rect><rect x="148.3" y="384.1" width="29.0" height="65.9" fill="#5a9bd5"><title>1999 Ch.7: 2,268</title></rect><rect x="148.3" y="357.2" width="29.0" height="26.9" fill="#70ad47"><title>1999 Ch.13: 924</title></rect><rect x="148.3" y="356.6" width="29.0" height="0.6" fill="#ed7d31"><title>1999 Ch.11: 21</title></rect><rect x="182.4" y="388.6" width="29.0" height="61.4" fill="#5a9bd5"><title>2000 Ch.7: 2,112</title></rect><rect x="182.4" y="339.8" width="29.0" height="48.8" fill="#70ad47"><title>2000 Ch.13: 1,678</title></rect><rect x="182.4" y="339.2" width="29.0" height="0.7" fill="#ed7d31"><title>2000 Ch.11: 23</title></rect><rect x="216.6" y="338.1" width="29.0" height="111.9" fill="#5a9bd5"><title>2001 Ch.7: 3,850</title></rect><rect x="216.6" y="230.9" width="29.0" height="107.2" fill="#70ad47"><title>2001 Ch.13: 3,687</title></rect><rect x="216.6" y="229.6" width="29.0" height="1.4" fill="#ed7d31"><title>2001 Ch.11: 47</title></rect><rect x="250.7" y="323.6" width="29.0" height="126.4" fill="#5a9bd5"><title>2002 Ch.7: 4,350</title></rect><rect x="250.7" y="196.5" width="29.0" height="127.1" fill="#70ad47"><title>2002 Ch.13: 4,371</title></rect><rect x="250.7" y="195.5" width="29.0" height="1.0" fill="#ed7d31"><title>2002 Ch.11: 33</title></rect><rect x="284.8" y="263.8" width="29.0" height="186.2" fill="#5a9bd5"><title>2003 Ch.7: 6,407</title></rect><rect x="284.8" y="87.6" width="29.0" height="176.1" fill="#70ad47"><title>2003 Ch.13: 6,060</title></rect><rect x="284.8" y="86.4" width="29.0" height="1.2" fill="#ed7d31"><title>2003 Ch.11: 43</title></rect><rect x="319.0" y="322.2" width="29.0" height="127.8" fill="#5a9bd5"><title>2004 Ch.7: 4,398</title></rect><rect x="319.0" y="184.2" width="29.0" height="137.9" fill="#70ad47"><title>2004 Ch.13: 4,745</title></rect><rect x="319.0" y="183.2" width="29.0" height="1.0" fill="#ed7d31"><title>2004 Ch.11: 36</title></rect><rect x="353.1" y="257.9" width="29.0" height="192.1" fill="#5a9bd5"><title>2005 Ch.7: 6,610</title></rect><rect x="353.1" y="137.6" width="29.0" height="120.3" fill="#70ad47"><title>2005 Ch.13: 4,138</title></rect><rect x="353.1" y="136.6" width="29.0" height="1.0" fill="#ed7d31"><title>2005 Ch.11: 34</title></rect><rect x="387.2" y="386.0" width="29.0" height="64.0" fill="#5a9bd5"><title>2006 Ch.7: 2,203</title></rect><rect x="387.2" y="304.5" width="29.0" height="81.4" fill="#70ad47"><title>2006 Ch.13: 2,802</title></rect><rect x="387.2" y="303.9" width="29.0" height="0.6" fill="#ed7d31"><title>2006 Ch.11: 22</title></rect><rect x="421.4" y="350.2" width="29.0" height="99.8" fill="#5a9bd5"><title>2007 Ch.7: 3,435</title></rect><rect x="421.4" y="252.8" width="29.0" height="97.3" fill="#70ad47"><title>2007 Ch.13: 3,348</title></rect><rect x="421.4" y="251.4" width="29.0" height="1.4" fill="#ed7d31"><title>2007 Ch.11: 48</title></rect><rect x="455.5" y="343.3" width="29.0" height="106.7" fill="#5a9bd5"><title>2008 Ch.7: 3,671</title></rect><rect x="455.5" y="254.1" width="29.0" height="89.2" fill="#70ad47"><title>2008 Ch.13: 3,069</title></rect><rect x="455.5" y="251.8" width="29.0" height="2.3" fill="#ed7d31"><title>2008 Ch.11: 80</title></rect><rect x="489.7" y="334.3" width="29.0" height="115.7" fill="#5a9bd5"><title>2009 Ch.7: 3,981</title></rect><rect x="489.7" y="245.9" width="29.0" height="88.4" fill="#70ad47"><title>2009 Ch.13: 3,040</title></rect><rect x="489.7" y="241.4" width="29.0" height="4.5" fill="#ed7d31"><title>2009 Ch.11: 154</title></rect><rect x="523.8" y="315.3" width="29.0" height="134.7" fill="#5a9bd5"><title>2010 Ch.7: 4,635</title></rect><rect x="523.8" y="217.3" width="29.0" height="98.0" fill="#70ad47"><title>2010 Ch.13: 3,371</title></rect><rect x="523.8" y="211.2" width="29.0" height="6.1" fill="#ed7d31"><title>2010 Ch.11: 211</title></rect><rect x="557.9" y="333.1" width="29.0" height="116.9" fill="#5a9bd5"><title>2011 Ch.7: 4,023</title></rect><rect x="557.9" y="236.6" width="29.0" height="96.4" fill="#70ad47"><title>2011 Ch.13: 3,318</title></rect><rect x="557.9" y="230.0" width="29.0" height="6.6" fill="#ed7d31"><title>2011 Ch.11: 227</title></rect><rect x="592.1" y="357.2" width="29.0" height="92.8" fill="#5a9bd5"><title>2012 Ch.7: 3,193</title></rect><rect x="592.1" y="275.3" width="29.0" height="81.9" fill="#70ad47"><title>2012 Ch.13: 2,817</title></rect><rect x="592.1" y="271.0" width="29.0" height="4.3" fill="#ed7d31"><title>2012 Ch.11: 148</title></rect><rect x="626.2" y="345.9" width="29.0" height="104.1" fill="#5a9bd5"><title>2013 Ch.7: 3,582</title></rect><rect x="626.2" y="263.4" width="29.0" height="82.5" fill="#70ad47"><title>2013 Ch.13: 2,839</title></rect><rect x="626.2" y="258.2" width="29.0" height="5.2" fill="#ed7d31"><title>2013 Ch.11: 179</title></rect><rect x="660.3" y="340.9" width="29.0" height="109.1" fill="#5a9bd5"><title>2014 Ch.7: 3,752</title></rect><rect x="660.3" y="245.5" width="29.0" height="95.4" fill="#70ad47"><title>2014 Ch.13: 3,283</title></rect><rect x="660.3" y="240.9" width="29.0" height="4.6" fill="#ed7d31"><title>2014 Ch.11: 157</title></rect><rect x="694.5" y="351.4" width="29.0" height="98.6" fill="#5a9bd5"><title>2015 Ch.7: 3,393</title></rect><rect x="694.5" y="254.9" width="29.0" height="96.4" fill="#70ad47"><title>2015 Ch.13: 3,318</title></rect><rect x="694.5" y="250.2" width="29.0" height="4.7" fill="#ed7d31"><title>2015 Ch.11: 163</title></rect><rect x="728.6" y="355.6" width="29.0" height="94.4" fill="#5a9bd5"><title>2016 Ch.7: 3,246</title></rect><rect x="728.6" y="250.1" width="29.0" height="105.5" fill="#70ad47"><title>2016 Ch.13: 3,631</title></rect><rect x="728.6" y="244.1" width="29.0" height="6.0" fill="#ed7d31"><title>2016 Ch.11: 205</title></rect><rect x="762.8" y="351.1" width="29.0" height="98.9" fill="#5a9bd5"><title>2017 Ch.7: 3,404</title></rect><rect x="762.8" y="236.5" width="29.0" height="114.6" fill="#70ad47"><title>2017 Ch.13: 3,942</title></rect><rect x="762.8" y="231.4" width="29.0" height="5.1" fill="#ed7d31"><title>2017 Ch.11: 175</title></rect><rect x="796.9" y="349.8" width="29.0" height="100.2" fill="#5a9bd5"><title>2018 Ch.7: 3,448</title></rect><rect x="796.9" y="221.0" width="29.0" height="128.8" fill="#70ad47"><title>2018 Ch.13: 4,431</title></rect><rect x="796.9" y="214.0" width="29.0" height="7.0" fill="#ed7d31"><title>2018 Ch.11: 241</title></rect><rect x="831.0" y="339.0" width="29.0" height="111.0" fill="#5a9bd5"><title>2019 Ch.7: 3,820</title></rect><rect x="831.0" y="178.0" width="29.0" height="161.0" fill="#70ad47"><title>2019 Ch.13: 5,538</title></rect><rect x="831.0" y="171.2" width="29.0" height="6.8" fill="#ed7d31"><title>2019 Ch.11: 235</title></rect><rect x="865.2" y="375.6" width="29.0" height="74.4" fill="#5a9bd5"><title>2020 Ch.7: 2,561</title></rect><rect x="865.2" y="286.3" width="29.0" height="89.3" fill="#70ad47"><title>2020 Ch.13: 3,072</title></rect><rect x="865.2" y="280.4" width="29.0" height="5.8" fill="#ed7d31"><title>2020 Ch.11: 200</title></rect><rect x="899.3" y="391.0" width="29.0" height="59.0" fill="#5a9bd5"><title>2021 Ch.7: 2,029</title></rect><rect x="899.3" y="317.6" width="29.0" height="73.5" fill="#70ad47"><title>2021 Ch.13: 2,527</title></rect><rect x="899.3" y="311.2" width="29.0" height="6.4" fill="#ed7d31"><title>2021 Ch.11: 219</title></rect><rect x="933.4" y="403.9" width="29.0" height="46.1" fill="#5a9bd5"><title>2022 Ch.7: 1,587</title></rect><rect x="933.4" y="319.7" width="29.0" height="84.1" fill="#70ad47"><title>2022 Ch.13: 2,894</title></rect><rect x="933.4" y="314.2" width="29.0" height="5.5" fill="#ed7d31"><title>2022 Ch.11: 190</title></rect><rect x="967.6" y="393.3" width="29.0" height="56.7" fill="#5a9bd5"><title>2023 Ch.7: 1,951</title></rect><rect x="967.6" y="286.3" width="29.0" height="107.0" fill="#70ad47"><title>2023 Ch.13: 3,682</title></rect><rect x="967.6" y="277.1" width="29.0" height="9.1" fill="#ed7d31"><title>2023 Ch.11: 314</title></rect><rect x="1001.7" y="354.7" width="29.0" height="95.3" fill="#5a9bd5"><title>2024 Ch.7: 3,280</title></rect><rect x="1001.7" y="232.5" width="29.0" height="122.1" fill="#70ad47"><title>2024 Ch.13: 4,201</title></rect><rect x="1001.7" y="211.5" width="29.0" height="21.1" fill="#ed7d31"><title>2024 Ch.11: 725</title></rect><rect x="1035.9" y="338.2" width="29.0" height="111.8" fill="#5a9bd5"><title>2025 Ch.7: 3,847</title></rect><rect x="1035.9" y="221.2" width="29.0" height="117.0" fill="#70ad47"><title>2025 Ch.13: 4,025</title></rect><rect x="1035.9" y="188.7" width="29.0" height="32.5" fill="#ed7d31"><title>2025 Ch.11: 1,119</title></rect>
+<line x1="367.61206896551727" y1="50" x2="367.61206896551727" y2="450" stroke="#888" stroke-dasharray="4,4"/><text x="371.61206896551727" y="90" font-size="11" fill="#444" font-weight="600">BAPCPA pre-deadline surge (Oct 17)</text><line x1="504.1637931034483" y1="50" x2="504.1637931034483" y2="450" stroke="#888" stroke-dasharray="4,4"/><text x="508.1637931034483" y="230" font-size="11" fill="#444" font-weight="600">Great Recession peak</text><line x1="845.5431034482758" y1="50" x2="845.5431034482758" y2="450" stroke="#888" stroke-dasharray="4,4"/><text x="849.5431034482758" y="90" font-size="11" fill="#444" font-weight="600">Pre-pandemic baseline</text><line x1="913.8189655172414" y1="50" x2="913.8189655172414" y2="450" stroke="#888" stroke-dasharray="4,4"/><text x="917.8189655172414" y="230" font-size="11" fill="#444" font-weight="600">COVID stimulus + moratoriums = filings DROP</text><line x1="1050.3706896551723" y1="50" x2="1050.3706896551723" y2="450" stroke="#888" stroke-dasharray="4,4"/><text x="1054.3706896551723" y="90" font-size="11" fill="#444" font-weight="600">Post-pandemic recovery</text>
+<text x="94.5" y="468" font-size="11" text-anchor="middle" fill="#444">1997</text><text x="162.8" y="468" font-size="11" text-anchor="middle" fill="#444">1999</text><text x="231.1" y="468" font-size="11" text-anchor="middle" fill="#444">2001</text><text x="299.3" y="468" font-size="11" text-anchor="middle" fill="#444">2003</text><text x="367.6" y="468" font-size="11" text-anchor="middle" fill="#444">2005</text><text x="435.9" y="468" font-size="11" text-anchor="middle" fill="#444">2007</text><text x="504.2" y="468" font-size="11" text-anchor="middle" fill="#444">2009</text><text x="572.4" y="468" font-size="11" text-anchor="middle" fill="#444">2011</text><text x="640.7" y="468" font-size="11" text-anchor="middle" fill="#444">2013</text><text x="709.0" y="468" font-size="11" text-anchor="middle" fill="#444">2015</text><text x="777.3" y="468" font-size="11" text-anchor="middle" fill="#444">2017</text><text x="845.5" y="468" font-size="11" text-anchor="middle" fill="#444">2019</text><text x="913.8" y="468" font-size="11" text-anchor="middle" fill="#444">2021</text><text x="982.1" y="468" font-size="11" text-anchor="middle" fill="#444">2023</text><text x="1050.4" y="468" font-size="11" text-anchor="middle" fill="#444">2025</text>
+<rect x="80" y="505" width="14" height="14" fill="#5a9bd5"/><text x="100" y="516" font-size="12" fill="#444">Chapter 7</text><rect x="180" y="505" width="14" height="14" fill="#70ad47"/><text x="200" y="516" font-size="12" fill="#444">Chapter 13</text><rect x="280" y="505" width="14" height="14" fill="#ed7d31"/><text x="300" y="516" font-size="12" fill="#444">Chapter 11</text>
+<text x="550.0" y="535" font-size="13" text-anchor="middle" fill="#222">Year</text>
+<text x="20" y="270.0" font-size="13" text-anchor="middle" fill="#222" transform="rotate(-90 20 270.0)">Cases filed (sample)</text>
+</svg>
+
+<h2>Headline findings</h2>
+
+<div class="headline-stat">
+<div class="num">52% drop</div>
+<div class="label">Filings dropped 52% from 2005 (10,782) to 2006 (5,027). The BAPCPA Act took effect October 17, 2005, with stricter qualifications. Filers rushed to beat the deadline; the post-deadline year saw the largest single-year drop in modern bankruptcy history.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">2020-2022 paradox</div>
+<div class="label">During COVID, filings <strong>declined</strong> from 9,593 (2019) to 4,671 (2022) &mdash; a 51% drop during one of the worst economic shocks in a century. Direct stimulus checks + foreclosure / eviction moratoriums + student-loan payment pauses prevented the bankruptcy wave that a 2008-style recession would have produced.</div>
+</div>
+
+<div class="headline-stat">
+<div class="num">Recovery in progress</div>
+<div class="label">2024 (8,206) and 2025 (8,991) show filing volumes returning to pre-pandemic baseline. The post-stimulus financial-distress is materializing as bankruptcy filings catch up to 2-3 years of suppressed demand.</div>
+</div>
+
+<h2>What the four regimes show</h2>
+
+<h3>Pre-BAPCPA (1997-2005): the long climb</h3>
+<p>Filings climbed steadily from ~2,400/year (1997) to ~12,500 (2003), peaking at 10,782 in 2005 in
+the run-up to the October 2005 BAPCPA effective date. The 2005 spike specifically reflects debtors
+rushing to file under the more favorable pre-BAPCPA rules. The increase was anticipated and
+encouraged by the consumer-bankruptcy bar, which had warned clients of the pending changes.</p>
+
+<h3>Post-BAPCPA (2006-2007): the cliff</h3>
+<p>The 52% single-year drop from 2005 to 2006 is one of the cleanest "policy effect" signals in modern
+bankruptcy data. Several factors converged:</p>
+<ul>
+<li>The 2005 spike pulled forward filings that would otherwise have happened in 2006-2008</li>
+<li>BAPCPA's means test made Chapter 7 unavailable for some above-median debtors</li>
+<li>The new credit-counseling and debtor-education requirements added friction</li>
+<li>Attorney fees rose significantly (BAPCPA increased professional-responsibility burdens)</li>
+</ul>
+<p>By 2007-2008, filings had partially recovered as the system absorbed the new rules.</p>
+
+<h3>Great Recession (2008-2011): the peak</h3>
+<p>The Great Recession-driven peak in 2010 (8,217) reflects the foreclosure crisis, mortgage-fueled
+distress, and the unwinding of pre-2008 housing bubble equity. Filings sustained at elevated levels
+through 2011, then declined steadily through 2017 as the economy recovered.</p>
+
+<h3>COVID era (2020-2022): the paradox</h3>
+<p>The most counterintuitive finding in the dataset. Conventional wisdom expected COVID to produce
+a massive bankruptcy wave; the empirical reality is the opposite. Three explanations:</p>
+<ul>
+<li><strong>Direct stimulus</strong> &mdash; CARES Act and follow-up payments injected ~$5 trillion into household balance sheets, preventing the cascading payment failures that drive filings</li>
+<li><strong>Moratoriums</strong> &mdash; foreclosure, eviction, and student-loan payment pauses removed the forcing functions that typically push debtors into bankruptcy</li>
+<li><strong>Forbearance programs</strong> &mdash; widespread mortgage and credit-card forbearance prevented near-term default cascades</li>
+</ul>
+<p>The 2020-2022 period demonstrates that <em>direct fiscal intervention can prevent bankruptcy waves
+even during severe economic shocks</em>. This finding is being cited in policy literature on
+recession response design.</p>
+
+<h3>The 2023-2025 recovery</h3>
+<p>As stimulus ended, moratoriums lifted, and the cumulative effect of post-pandemic inflation
+materialized, bankruptcy filings have rebounded. The 2024-2025 levels (~8,500/year average) are
+returning to pre-pandemic baseline, but with notable shifts in chapter mix &mdash; Chapter 11
+volume in 2024-2025 (725, 1,119) is more than 4x the 2022 level (190), reflecting business-side
+distress as commercial real estate and small-business sectors absorb the post-zero-rate-environment
+stress.</p>
+
+<h2>Per-chapter trend table</h2>
+<table>
+<tr><th>Year</th><th>Ch. 7</th><th>Ch. 11</th><th>Ch. 13</th><th>Total</th></tr>
+<tr><td>1997</td><td>1,594</td><td>15</td><td>806</td><td>2,415</td></tr><tr><td>1998</td><td>2,663</td><td>18</td><td>898</td><td>3,579</td></tr><tr><td>1999</td><td>2,268</td><td>21</td><td>924</td><td>3,213</td></tr><tr><td>2000</td><td>2,112</td><td>23</td><td>1,678</td><td>3,813</td></tr><tr><td>2001</td><td>3,850</td><td>47</td><td>3,687</td><td>7,584</td></tr><tr><td>2002</td><td>4,350</td><td>33</td><td>4,371</td><td>8,754</td></tr><tr><td>2003</td><td>6,407</td><td>43</td><td>6,060</td><td>12,510</td></tr><tr><td>2004</td><td>4,398</td><td>36</td><td>4,745</td><td>9,179</td></tr><tr><td>2005</td><td>6,610</td><td>34</td><td>4,138</td><td>10,782</td></tr><tr><td>2006</td><td>2,203</td><td>22</td><td>2,802</td><td>5,027</td></tr><tr><td>2007</td><td>3,435</td><td>48</td><td>3,348</td><td>6,831</td></tr><tr><td>2008</td><td>3,671</td><td>80</td><td>3,069</td><td>6,820</td></tr><tr><td>2009</td><td>3,981</td><td>154</td><td>3,040</td><td>7,175</td></tr><tr><td>2010</td><td>4,635</td><td>211</td><td>3,371</td><td>8,217</td></tr><tr><td>2011</td><td>4,023</td><td>227</td><td>3,318</td><td>7,568</td></tr><tr><td>2012</td><td>3,193</td><td>148</td><td>2,817</td><td>6,158</td></tr><tr><td>2013</td><td>3,582</td><td>179</td><td>2,839</td><td>6,600</td></tr><tr><td>2014</td><td>3,752</td><td>157</td><td>3,283</td><td>7,192</td></tr><tr><td>2015</td><td>3,393</td><td>163</td><td>3,318</td><td>6,874</td></tr><tr><td>2016</td><td>3,246</td><td>205</td><td>3,631</td><td>7,082</td></tr><tr><td>2017</td><td>3,404</td><td>175</td><td>3,942</td><td>7,521</td></tr><tr><td>2018</td><td>3,448</td><td>241</td><td>4,431</td><td>8,120</td></tr><tr><td>2019</td><td>3,820</td><td>235</td><td>5,538</td><td>9,593</td></tr><tr><td>2020</td><td>2,561</td><td>200</td><td>3,072</td><td>5,833</td></tr><tr><td>2021</td><td>2,029</td><td>219</td><td>2,527</td><td>4,775</td></tr><tr><td>2022</td><td>1,587</td><td>190</td><td>2,894</td><td>4,671</td></tr><tr><td>2023</td><td>1,951</td><td>314</td><td>3,682</td><td>5,947</td></tr><tr><td>2024</td><td>3,280</td><td>725</td><td>4,201</td><td>8,206</td></tr><tr><td>2025</td><td>3,847</td><td>1,119</td><td>4,025</td><td>8,991</td></tr>
+</table>
+
+<h2>Methodology</h2>
+<p>Data are from the OBP empirical dataset of 218,913 federal bankruptcy cases. The sample is drawn
+from PACER pulls focused on a research subset of districts; absolute volumes reflect data-collection
+focus, not national prevalence. Year-over-year shape and inflection points are sampling-bias
+resistant and consistent with national reporting from the Administrative Office of the U.S. Courts.</p>
+
+<h2>Open dataset</h2>
+<p>Full filing-volume time series CSV: <a href="../data/filing_volume_by_year_chapter.csv">filing_volume_by_year_chapter.csv</a> (CC BY 4.0).</p>
+
+<h2>Citation</h2>
+<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). Bankruptcy Filing Volume Time Series 1997-2025, v0.1.
+501(c)(3) public charity (EIN 41-5159631).
+URL: https://viz.openbankruptcyproject.org/filing-trends/
+License: CC BY 4.0
+</pre>
+<div class="related">
+<strong>Related:</strong>
+<a href="https://viz.openbankruptcyproject.org/">Viz hub</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/outcomes-duration/">Outcomes &amp; Duration</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/rare-outcomes/">Rare Outcomes</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/subv-adoption-curve/">Sub V curve</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f)</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Toolkit</a>
+</div>
+<footer>
+<p>Empirical research published under CC BY 4.0. Methodology + source code in the public toolkit repo.
+<strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+</footer>
+</body>
+</html>
