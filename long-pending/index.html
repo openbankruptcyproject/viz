@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Long-Pending Zombie Cases | OBP Empirical Research</title>
+<meta name="description" content="2,065 federal bankruptcy cases pending 5+ years with no termination signal. Alabama Middle leads at 137.77 zombies per 1,000 cases. CC BY 4.0 dataset.">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/long-pending/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Federal Bankruptcy Long-Pending Cases (5+ years, no termination)",
+  "description": "2,065 federal bankruptcy cases filed but never closed (no date_termed, date_dismissed, or date_discharged) at 5+ years of age. Per-district, per-chapter, per-year-filed breakdown.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {"@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://openbankruptcyproject.org"}
+}
+</script>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:900px;margin:2rem auto;padding:0 1.2rem;line-height:1.6;color:#222}
+h1{color:#0a3d62}
+h2{color:#0a3d62;margin-top:2rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
+.stat{background:#f5f7fa;padding:1rem;border-radius:6px;border-left:4px solid #0a3d62}
+.stat-num{font-size:2rem;font-weight:bold;color:#0a3d62}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid #ddd}
+th{background:#0a3d62;color:#fff}
+.note{background:#fffbe6;padding:1rem;border-left:4px solid #f1c40f;margin:1rem 0}
+a{color:#0a3d62}
+.dl{background:#e8f4f8;padding:1rem;border-radius:6px;margin:1.5rem 0}
+.dl a{display:inline-block;margin-right:1rem;font-weight:bold}
+</style>
+</head>
+<body>
+<p><a href="/">&larr; Back to viz hub</a></p>
+<h1>Long-Pending Zombie Cases</h1>
+<p>Federal bankruptcy cases that were filed but show no termination, dismissal, or discharge in PACER metadata. <strong>2,065 cases</strong> are still pending 5 or more years after filing. <strong>87 cases</strong> are 10+ years old with no closure signal.</p>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">18,144</div>Cases with no termination signal in our corpus</div>
+  <div class="stat"><div class="stat-num">2,065</div>Pending 5+ years (1,662 are Ch.13)</div>
+  <div class="stat"><div class="stat-num">87</div>Pending 10+ years (true zombies)</div>
+  <div class="stat"><div class="stat-num">137.77</div>Alabama Middle zombie rate per 1,000 cases</div>
+</div>
+
+<div class="note">
+<strong>What this measures.</strong> Cases where date_filed is populated but all three closure dates (date_termed, date_dismissed, date_discharged) are null. Some are administrative gaps in PACER metadata; others are genuinely orphaned cases that never reach disposition. Both populations are interesting &mdash; the first reveals data-quality patterns, the second reveals systemic court-management gaps.
+</div>
+
+<h2>Pending cases by age</h2>
+<table>
+<thead><tr><th>Age</th><th>Count</th></tr></thead>
+<tbody>
+<tr><td>1+ year</td><td>12,551</td></tr>
+<tr><td>2+ years</td><td>8,077</td></tr>
+<tr><td>3+ years</td><td>5,128</td></tr>
+<tr><td>5+ years</td><td>2,065</td></tr>
+<tr><td>10+ years</td><td>87</td></tr>
+</tbody>
+</table>
+
+<h2>5+ year zombies by chapter</h2>
+<table>
+<thead><tr><th>Chapter</th><th>Zombies</th><th>Total in chapter</th><th>Rate per 1,000</th></tr></thead>
+<tbody>
+<tr><td>Ch.13</td><td>1,662</td><td>103,194</td><td>16.10</td></tr>
+<tr><td>Ch.7</td><td>205</td><td>104,300</td><td>1.97</td></tr>
+<tr><td>Ch.11</td><td>158</td><td>5,737</td><td>27.53</td></tr>
+<tr><td>Ch.12</td><td>6</td><td>137</td><td>43.80</td></tr>
+</tbody>
+</table>
+
+<h2>Top districts (5+ year zombie rate, vol &gt;=500)</h2>
+<table>
+<thead><tr><th>District</th><th>Zombies</th><th>Total cases</th><th>Rate per 1,000</th></tr></thead>
+<tbody>
+<tr><td>almbk</td><td>147</td><td>1,067</td><td>137.77</td></tr>
+<tr><td>alnbk</td><td>96</td><td>967</td><td>99.28</td></tr>
+<tr><td>scbk</td><td>79</td><td>841</td><td>93.94</td></tr>
+<tr><td>kyebk</td><td>110</td><td>1,227</td><td>89.65</td></tr>
+<tr><td>paebk</td><td>159</td><td>1,778</td><td>89.43</td></tr>
+<tr><td>vaebk</td><td>122</td><td>1,432</td><td>85.20</td></tr>
+<tr><td>ncebk</td><td>62</td><td>732</td><td>84.70</td></tr>
+<tr><td>miebk</td><td>117</td><td>1,408</td><td>83.10</td></tr>
+<tr><td>innbk</td><td>118</td><td>1,508</td><td>78.25</td></tr>
+<tr><td>arebk</td><td>40</td><td>514</td><td>77.82</td></tr>
+</tbody>
+</table>
+
+<div class="dl">
+<strong>Download the data (CC BY 4.0):</strong><br>
+<a href="/data/long_pending_by_district.csv">long_pending_by_district.csv</a>
+<a href="/data/long_pending_by_chapter.csv">long_pending_by_chapter.csv</a>
+<a href="/data/long_pending_by_year.csv">long_pending_by_year.csv</a>
+</div>
+
+<h2>Why this matters</h2>
+<p>A 5+ year Ch.13 case with no closure signal is right at the statutory plan maximum (60 months). Some are cases where the discharge order issued but the docket date didn't propagate; others are cases that completed but never closed administratively; others are still genuinely pending. PACER metadata cannot distinguish among these without docket-level review.</p>
+
+<p>Ch.7 zombies (205 of them, 5+ years old) are a different animal &mdash; Ch.7 should close within 6 months of filing. A 5-year-old open Ch.7 reflects either an unresolved adversary, a no-asset administrative tail, or a docket-data gap.</p>
+
+<p><a href="/">&larr; Back to viz hub</a> | <a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">View on GitHub</a></p>
+</body>
+</html>
