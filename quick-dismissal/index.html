@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quick Dismissal Patterns | OBP Empirical Research</title>
+<meta name="description" content="1,268 federal bankruptcy cases dismissed within 30 days of filing. Per-district, per-chapter, and per-year analysis. CC BY 4.0 dataset.">
+<link rel="canonical" href="https://viz.openbankruptcyproject.org/quick-dismissal/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Federal Bankruptcy Quick-Dismissal Patterns (30/60/90 days)",
+  "description": "1,268 cases dismissed within 30 days of filing, plus 60-day and 90-day cohorts. Per-district, per-chapter, per-year breakdown.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {"@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://openbankruptcyproject.org"},
+  "distribution": [
+    {"@type": "DataDownload", "encodingFormat": "CSV", "contentUrl": "https://viz.openbankruptcyproject.org/data/quick_dismissal_by_district.csv"},
+    {"@type": "DataDownload", "encodingFormat": "CSV", "contentUrl": "https://viz.openbankruptcyproject.org/data/quick_dismissal_by_chapter.csv"},
+    {"@type": "DataDownload", "encodingFormat": "CSV", "contentUrl": "https://viz.openbankruptcyproject.org/data/quick_dismissal_by_year.csv"}
+  ]
+}
+</script>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:900px;margin:2rem auto;padding:0 1.2rem;line-height:1.6;color:#222}
+h1{color:#0a3d62}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
+.stat{background:#f5f7fa;padding:1rem;border-radius:6px;border-left:4px solid #0a3d62}
+.stat-num{font-size:2rem;font-weight:bold;color:#0a3d62}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid #ddd}
+th{background:#0a3d62;color:#fff}
+.note{background:#fffbe6;padding:1rem;border-left:4px solid #f1c40f;margin:1rem 0}
+a{color:#0a3d62}
+.dl{background:#e8f4f8;padding:1rem;border-radius:6px;margin:1.5rem 0}
+.dl a{display:inline-block;margin-right:1rem;font-weight:bold}
+</style>
+</head>
+<body>
+<p><a href="/">&larr; Back to viz hub</a></p>
+<h1>Quick-Dismissal Patterns</h1>
+<p>How fast does a federal bankruptcy case get dismissed? <strong>1,268 cases</strong> across 220,037 in our corpus were dismissed within 30 days of filing &mdash; a population that captures procedural failures (missing documents, fee defaults, ineligibility) rather than substantive litigation.</p>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">1,268</div>Dismissed within 30 days</div>
+  <div class="stat"><div class="stat-num">3,665</div>Dismissed within 60 days</div>
+  <div class="stat"><div class="stat-num">6,460</div>Dismissed within 90 days</div>
+  <div class="stat"><div class="stat-num">18.1%</div>Of Ch.7 dismissals happen in &le;30 days</div>
+</div>
+
+<div class="note">
+<strong>Why Ch.7 quick-dismissal rate is so much higher.</strong> Ch.7 cases run on a tight 60-90 day timeline; if they fail, they fail fast. Ch.13 cases live for 3-5 years, and most dismissals come deep in the plan period (median 483 days for fee-failures). Quick-dismissal as a percentage of total dismissals is therefore most useful as a within-chapter comparison, not across chapters.
+</div>
+
+<h2>By chapter (&le;30 days)</h2>
+<table>
+<thead><tr><th>Chapter</th><th>Quick dismissals</th><th>Total dismissed</th><th>% of dismissals</th></tr></thead>
+<tbody>
+<tr><td>Ch.7</td><td>334</td><td>1,850</td><td>18.1%</td></tr>
+<tr><td>Ch.11</td><td>40</td><td>852</td><td>4.7%</td></tr>
+<tr><td>Ch.13</td><td>877</td><td>35,305</td><td>2.5%</td></tr>
+<tr><td>Adversary Proceeding</td><td>17</td><td>1,738</td><td>1.0%</td></tr>
+</tbody>
+</table>
+
+<h2>Top districts by quick-dismissal rate</h2>
+<table>
+<thead><tr><th>District</th><th>&le;30 day dismissals</th><th>Total dismissed</th><th>Rate</th></tr></thead>
+<tbody>
+<tr><td>cacbk</td><td>108</td><td>561</td><td>19.25%</td></tr>
+<tr><td>flsbk</td><td>831</td><td>11,826</td><td>7.03%</td></tr>
+<tr><td>njbk</td><td>18</td><td>321</td><td>5.61%</td></tr>
+<tr><td>flnbk</td><td>5</td><td>136</td><td>3.68%</td></tr>
+<tr><td>moebk</td><td>18</td><td>562</td><td>3.20%</td></tr>
+<tr><td>flmbk</td><td>35</td><td>1,280</td><td>2.73%</td></tr>
+<tr><td>tnwbk</td><td>11</td><td>705</td><td>1.56%</td></tr>
+<tr><td>mowbk</td><td>101</td><td>7,778</td><td>1.30%</td></tr>
+<tr><td>nvbk</td><td>1</td><td>108</td><td>0.93%</td></tr>
+<tr><td>txsbk</td><td>95</td><td>11,241</td><td>0.85%</td></tr>
+</tbody>
+</table>
+
+<div class="dl">
+<strong>Download the data (CC BY 4.0):</strong><br>
+<a href="/data/quick_dismissal_by_district.csv">quick_dismissal_by_district.csv</a>
+<a href="/data/quick_dismissal_by_chapter.csv">quick_dismissal_by_chapter.csv</a>
+<a href="/data/quick_dismissal_by_year.csv">quick_dismissal_by_year.csv</a>
+</div>
+
+<h2>Methodology</h2>
+<p>Source: 220,037 federal bankruptcy cases from PACER (2008-2026). Filtered for cases where (a) disposition contains "Dismissed" and (b) date_dismissed - date_filed is between 0 and 30/60/90 days. Excludes cases where either date field is null.</p>
+
+<p><strong>Why this matters.</strong> A case dismissed within 30 days rarely reflects substantive failure of the bankruptcy &mdash; it reflects an access barrier (filing-fee non-payment, missing schedules, ineligibility under § 109). Districts with persistently high quick-dismissal rates may have stricter local-rule enforcement, higher pro-se filing volume, or other systemic frictions worth examining.</p>
+
+<p><a href="/fee-failure/">&rarr; See also: Filing-Fee Failure Patterns</a></p>
+<p><a href="/">&larr; Back to viz hub</a> | <a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">View on GitHub</a></p>
+</body>
+</html>
